@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail, MapPin } from 'lucide-react';
 
+const WEB3FORMS_ACCESS_KEY = '10c8222d-4605-46f0-8559-c51926a666f9';
+
 export default function ContactSection() {
   const [form, setForm] = useState({
     name: '',
@@ -10,13 +12,47 @@ export default function ContactSection() {
     message: '',
   });
 
-  const handleSubmit = (e) => {
+  const [sending, setSending] = useState(false);
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setSending(true);
+    setStatus('');
 
-    const subject = `New Inquiry from ${form.name}`;
-    const body = `Name: ${form.name}%0D%0AEmail: ${form.email}%0D%0AProfile: ${form.type}%0D%0A%0D%0AMessage:%0D%0A${form.message}`;
+    const payload = {
+      access_key: WEB3FORMS_ACCESS_KEY,
+      subject: `New NVeston Inquiry from ${form.name}`,
+      from_name: 'NVeston Website',
+      name: form.name,
+      email: form.email,
+      profile: form.type,
+      message: form.message,
+    };
 
-    window.location.href = `mailto:contact@nveston.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus('Thank you. Your inquiry has been sent successfully.');
+        setForm({ name: '', email: '', type: '', message: '' });
+      } else {
+        setStatus('Something went wrong. Please email contact@nveston.com directly.');
+      }
+    } catch (error) {
+      setStatus('Something went wrong. Please email contact@nveston.com directly.');
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -136,16 +172,24 @@ export default function ContactSection() {
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   placeholder="Briefly describe your objectives and how we may assist."
                   rows={5}
+                  required
                   className="w-full bg-card/50 border border-border focus:border-primary/40 rounded-sm font-inter text-sm px-4 py-3 outline-none resize-none"
                 />
               </div>
 
+              {status && (
+                <p className="font-inter text-sm text-primary">
+                  {status}
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="w-full sm:w-auto px-10 py-4 bg-primary text-primary-foreground font-inter font-medium text-sm tracking-wide rounded-sm hover:bg-primary/90 transition-all duration-300 inline-flex items-center justify-center"
+                disabled={sending}
+                className="w-full sm:w-auto px-10 py-4 bg-primary text-primary-foreground font-inter font-medium text-sm tracking-wide rounded-sm hover:bg-primary/90 transition-all duration-300 inline-flex items-center justify-center disabled:opacity-60"
               >
-                Send Inquiry
-                <ArrowRight size={16} className="ml-2" />
+                {sending ? 'Sending...' : 'Send Inquiry'}
+                {!sending && <ArrowRight size={16} className="ml-2" />}
               </button>
             </form>
           </motion.div>
