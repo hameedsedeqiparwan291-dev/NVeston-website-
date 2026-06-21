@@ -28,7 +28,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <a href="#" className="flex items-center gap-2">
             <img
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b3cbb81eeb7f1fe5fc635e/017c63f26_NVestonLogo.png"
+              src="/NVeston Logo.png"
               alt="NVeston"
               className="h-12 w-auto"
             />

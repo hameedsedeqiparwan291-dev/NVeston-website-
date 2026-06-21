@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-3">
           <img
-            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/69b3cbb81eeb7f1fe5fc635e/017c63f26_NVestonLogo.png"
+            src="/NVeston Logo.png"
             alt="NVeston"
             className="h-10 w-auto"
           />
