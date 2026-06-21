@@ -7,7 +7,7 @@ const clients = [
     icon: User,
     title: 'Individuals',
     description:
-      'High-net-worth individuals focused on protecting and compounding wealth through disciplined, long-term capital positioning beyond short-term market noise.',
+      'Individuals seeking greater clarity, discipline, and long-term direction in their financial and investment decisions through structured capital planning and strategic advisory.',
   },
   {
     icon: Briefcase,
