@@ -88,7 +88,7 @@ const WIDGET_CONFIG = {
 
   // ── Footer ─────────────────────────────────────────────────────────────────
   footer: {
-    disclaimer: 'HAMI provides general information only. Not investment advice.',
+    disclaimer: 'Before making consequential financial or capital decisions, confirm material information directly with the NVeston team.',
     termsLabel: 'Terms',
     termsHref:  '/policies/terms',
   },
