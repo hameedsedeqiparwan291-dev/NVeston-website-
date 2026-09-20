@@ -15,12 +15,12 @@ const steps = [
   {
     number: '03',
     title: 'Architect',
-    description: 'We design capital positioning frameworks tailored to your specific goals, focusing on structure, resilience, and long-term alignment rather than templated solutions.',
+    description: 'We design analytical frameworks tailored to your objectives—focusing on structure, resilience, and long-term clarity rather than templated solutions.',
   },
   {
     number: '04',
-    title: 'Execute & Evolve',
-    description: 'We support disciplined execution while continuously refining strategy as market conditions evolve, helping ensure capital remains aligned with changing environments.',
+    title: 'Apply & Evolve',
+    description: 'We support disciplined application while continuously refining analytical frameworks as conditions evolve, helping decisions remain aligned with changing environments.',
   },
 ];
 

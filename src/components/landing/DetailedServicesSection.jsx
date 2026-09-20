@@ -10,8 +10,8 @@ const services = [
   },
   {
     icon: BarChart2,
-    title: 'Investment & Portfolio Advisory',
-    description: 'Portfolio reviews, risk analysis, asset allocation guidance, and long-term capital positioning.',
+    title: 'Financial Markets & Portfolio Intelligence',
+    description: 'Portfolio diagnostics, risk and exposure analysis, diversification assessment, market research, and educational insights for informed financial decision-making.',
   },
   {
     icon: Globe,
@@ -21,7 +21,7 @@ const services = [
   {
     icon: Shield,
     title: 'Risk & Scenario Analysis',
-    description: 'Volatility assessment, stress testing, scenario analysis, and defensive allocation frameworks.',
+    description: 'Volatility assessment, stress testing, scenario analysis, and risk response frameworks.',
   },
   {
     icon: Lightbulb,
@@ -31,7 +31,7 @@ const services = [
   {
     icon: Star,
     title: 'Premium Strategic Advisory',
-    description: 'Advanced consultation programs, cross-asset analysis, and high-level strategic positioning.',
+    description: 'Advanced consultation programs, cross-asset analysis, and high-level strategic decision support.',
   },
 ];
 
