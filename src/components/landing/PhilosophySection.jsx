@@ -66,6 +66,14 @@ export default function PhilosophySection() {
                 </div>
               </div>
             </div>
+
+            <a
+              href="/founder"
+              className="inline-flex items-center mt-10 font-inter text-sm text-primary/80 hover:text-primary transition-colors duration-300 tracking-wide"
+            >
+              Meet NVeston's founder
+              <span aria-hidden="true" className="ml-2">&rarr;</span>
+            </a>
           </motion.div>
 
           <motion.div

@@ -15,7 +15,7 @@ export default function Footer() {
           </span>
         </div>
 
-        <div className="flex items-center gap-8">
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
           <a href="#services" className="text-xs font-inter text-muted-foreground hover:text-primary transition-colors tracking-wide uppercase">
             Services
           </a>
@@ -34,6 +34,10 @@ export default function Footer() {
 
           <a href="#contact" className="text-xs font-inter text-muted-foreground hover:text-primary transition-colors tracking-wide uppercase">
             Contact
+          </a>
+
+          <a href="/founder" className="text-xs font-inter text-muted-foreground hover:text-primary transition-colors tracking-wide uppercase">
+            Founder &amp; Leadership
           </a>
         </div>
 
