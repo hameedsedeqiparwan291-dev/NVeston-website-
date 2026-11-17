@@ -245,3 +245,16 @@ Review with `npm run build:preview && npm run serve` → http://localhost:4321
 
 Files: `src/components/site/visuals.jsx` (new), `src/index.css` (`.fi-*` styles), `src/pages/HomePage.jsx` (two placements).
 To complete the remaining two: supply (a) a HAMI character as a transparent animated WebM/animated WebP plus a static PNG, and (b) a licensed or commissioned editorial photograph (with model release). Both can then be integrated without touching HAMI's functionality.
+
+---
+
+## 13. Production release readiness review (2026-11-17)
+
+**Technical readiness: passed.** 24/24 unit tests; production build 26 routes + 404; static QA clean (27 pages, 1,660 internal links); draft articles absent from production build and sitemap; no committed credentials (only the public-by-design Web3Forms access key; `.env.local` untracked). Earlier responsive, keyboard, contrast, founder-head and calculator checks reused.
+
+**Release status: HELD before deployment** — material compliance items require founder decision:
+
+1. HAMI customer-facing copy invites investment/portfolio advice (welcome text in `HAMIWidget.jsx`; `welcomeBody` and two suggested questions in `widget.config.js`). Proposed replacement copy recorded in the release report. HAMI backend behaviour (refusal of personalized securities recommendations) cannot be verified from this repository.
+2. Privacy Policy, Terms of Use and Important Disclosures are unapproved drafts and are included in the production build. Instruction: do not publish unapproved legal drafts.
+3. Vercel Build Command cannot be verified from here (no dashboard access); options: founder confirms `npm run build` in Project Settings, or authorize a `vercel.json` (`buildCommand: npm run build`, `outputDirectory: dist`).
+4. For counsel (non-blocking unless counsel says otherwise): "Financial Markets & Portfolio Intelligence" service name; "advisory" terminology.
