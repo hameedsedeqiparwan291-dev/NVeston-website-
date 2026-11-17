@@ -1,13 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================================================
+   NVeston design tokens
+   Surfaces are themed per section: .theme-dark (deep navy, default),
+   .theme-navy (raised navy), .theme-light (warm white), .theme-paper (warm neutral).
+   Components use semantic tokens (background, foreground, primary…) so the
+   same component reads correctly on any surface.
+   ========================================================================== */
 @layer base {
-  :root {
-    --font-inter: 'Inter', sans-serif;
-    --font-display: 'Playfair Display', serif;
+  :root,
+  .theme-dark {
+    --font-inter: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
 
     --background: 222 47% 6%;
     --foreground: 40 20% 95%;
@@ -20,33 +26,183 @@
     --secondary: 222 30% 14%;
     --secondary-foreground: 40 20% 90%;
     --muted: 222 25% 16%;
-    --muted-foreground: 220 15% 55%;
+    --muted-foreground: 220 15% 64%;
     --accent: 40 50% 45%;
     --accent-foreground: 40 20% 95%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 222 20% 18%;
-    --input: 222 20% 18%;
+    --input: 222 20% 22%;
     --ring: 40 65% 55%;
+    --positive: 152 45% 52%;
+    --negative: 4 75% 66%;
     --chart-1: 40 65% 55%;
-    --chart-2: 200 50% 45%;
-    --chart-3: 160 40% 40%;
-    --chart-4: 280 40% 50%;
-    --chart-5: 20 60% 50%;
+    --chart-2: 210 35% 70%;
+    --chart-3: 220 12% 50%;
     --radius: 0.5rem;
   }
-}
 
-@layer base {
+  .theme-navy {
+    --background: 222 42% 11%;
+    --card: 222 38% 14%;
+    --muted: 222 28% 18%;
+    --border: 222 22% 22%;
+    --input: 222 22% 26%;
+  }
+
+  .theme-light,
+  .theme-paper {
+    --background: 40 33% 98%;
+    --foreground: 222 40% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 40% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 40% 12%;
+    --primary: 38 72% 31%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 20% 92%;
+    --secondary-foreground: 222 40% 12%;
+    --muted: 40 18% 93%;
+    --muted-foreground: 220 12% 33%;
+    --border: 40 12% 84%;
+    --input: 40 10% 72%;
+    --ring: 38 72% 31%;
+    --positive: 152 55% 26%;
+    --negative: 4 65% 42%;
+    --chart-1: 38 72% 38%;
+    --chart-2: 222 40% 22%;
+    --chart-3: 220 10% 62%;
+  }
+
+  .theme-paper {
+    --background: 40 24% 94%;
+    --card: 40 33% 98%;
+    --muted: 40 16% 89%;
+  }
+
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 6rem;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
-html {
-  scroll-behavior: smooth;
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply block font-inter text-xs font-medium uppercase tracking-[0.24em] text-primary;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .skip-link {
+    @apply sr-only;
+  }
+  .skip-link:focus {
+    @apply not-sr-only fixed left-4 top-4 z-[200] rounded-sm bg-primary px-4 py-2 text-sm font-medium text-primary-foreground;
+  }
+
+  /* Long-form text: articles and policies */
+  .prose-nv {
+    @apply max-w-measure font-inter text-[1.0625rem] leading-[1.75] text-foreground/90;
+  }
+  .prose-nv > * + * {
+    margin-top: 1.15em;
+  }
+  .prose-nv h2 {
+    @apply mt-12 font-display text-2xl font-medium leading-snug text-foreground;
+  }
+  .prose-nv h3 {
+    @apply mt-8 font-inter text-base font-semibold text-foreground;
+  }
+  .prose-nv ul {
+    @apply list-disc space-y-2 pl-5;
+  }
+  .prose-nv ol {
+    @apply list-decimal space-y-2 pl-5;
+  }
+  .prose-nv a {
+    @apply text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary;
+  }
+  .prose-nv strong {
+    @apply font-semibold text-foreground;
+  }
+  .prose-nv blockquote {
+    @apply border-l-2 border-primary/60 pl-5 font-display text-xl italic text-foreground;
+  }
+
+  /* Scroll reveal: applied only to elements below the fold after hydration,
+     so content is always visible without JavaScript. */
+  .reveal-pending {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  .reveal-in {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.7s cubic-bezier(0.2, 0.6, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.6, 0.2, 1);
+  }
+
+  /* Range input styled with the active surface's tokens */
+  .range-nv {
+    @apply h-1.5 w-full cursor-pointer appearance-none rounded-full bg-muted;
+    accent-color: hsl(var(--primary));
+  }
+  .range-nv::-webkit-slider-thumb {
+    @apply h-5 w-5 appearance-none rounded-full border-2 border-background bg-primary shadow;
+  }
+  .range-nv::-moz-range-thumb {
+    @apply h-5 w-5 rounded-full border-2 border-background bg-primary;
+  }
+
+  @keyframes nv-draw {
+    from { stroke-dashoffset: var(--len, 1200); }
+    to { stroke-dashoffset: 0; }
+  }
+  .draw-line {
+    stroke-dasharray: var(--len, 1200);
+    animation: nv-draw 2.2s cubic-bezier(0.3, 0.6, 0.2, 1) both;
+  }
 }

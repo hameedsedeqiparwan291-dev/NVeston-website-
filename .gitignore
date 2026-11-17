@@ -1,2 +1,4 @@
-.env.local
 dist/
+.env.local
+.ssr/
+node_modules/.vite-temp/

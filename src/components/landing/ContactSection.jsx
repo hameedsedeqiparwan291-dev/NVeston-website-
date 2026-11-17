@@ -1,6 +1,7 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowRight, Mail, MapPin } from 'lucide-react';
+import { CONTACT_TOPICS } from '../../content/catalog.js';
 
 const WEB3FORMS_ACCESS_KEY = '10c8222d-4605-46f0-8559-c51926a666f9';
 
@@ -228,6 +229,12 @@ export default function ContactSection() {
   const initialForm = () => ({ ...EMPTY_FORM, timeZone: detectedZone, altTimeZone: detectedZone });
 
   const [form, setForm] = useState(initialForm);
+
+  // Links such as /contact?topic=consultation preselect the matching topic.
+  useEffect(() => {
+    const purpose = CONTACT_TOPICS[new URLSearchParams(window.location.search).get('topic')];
+    if (purpose && PURPOSES.includes(purpose)) setForm((prev) => (prev.purpose ? prev : { ...prev, purpose }));
+  }, []);
   const [errors, setErrors] = useState({});
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState({ kind: '', text: '' });

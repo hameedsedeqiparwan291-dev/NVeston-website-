@@ -30,7 +30,17 @@ export default {
         },
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))'
+        ring: 'hsl(var(--ring))',
+        positive: 'hsl(var(--positive))',
+        negative: 'hsl(var(--negative))',
+        chart: {
+          1: 'hsl(var(--chart-1))',
+          2: 'hsl(var(--chart-2))',
+          3: 'hsl(var(--chart-3))'
+        }
+      },
+      maxWidth: {
+        measure: '68ch'
       }
     }
   },

@@ -1,14 +1,10 @@
-import Home from './pages/Home'
-import HAMIWidget from './hami-widget/HAMIWidget.jsx'
-import './hami-widget/widget.css'
+import React from 'react';
+import Layout from './components/site/Layout.jsx';
 
-function App() {
+export default function App({ route, Page }) {
   return (
-    <>
-      <Home />
-      <HAMIWidget />
-    </>
-  )
+    <Layout route={route}>
+      <Page route={route} />
+    </Layout>
+  );
 }
-
-export default App
