@@ -6,7 +6,8 @@ import { FOUNDER } from '../site/config.js';
 import {
   Section, Container, SectionHeading, ButtonLink, TextLink, LinkCard, StepList, HeroTexture, Icon, IllustrativeTag,
 } from '../components/site/ui.jsx';
-import { NeedsSelector, ProfitExample, ScenarioFan } from '../components/site/interactive.jsx';
+import { NeedsSelector, ProfitExample } from '../components/site/interactive.jsx';
+import { FinancialIntelligenceVisual, GlobeVisual } from '../components/site/visuals.jsx';
 import { ContactFormMount } from '../components/site/ClientOnly.jsx';
 
 const SCENARIOS = [
@@ -57,8 +58,8 @@ export default function HomePage() {
               <ButtonLink href={contactHref('consultation')} variant="secondary">Request an introductory consultation</ButtonLink>
             </div>
           </div>
-          <div className="lg:col-span-5">
-            <ScenarioFan />
+          <div className="pt-10 sm:pt-6 lg:col-span-5 lg:pt-0">
+            <FinancialIntelligenceVisual />
           </div>
         </Container>
       </Section>
@@ -98,14 +99,19 @@ export default function HomePage() {
       {/* Services */}
       <Section tone="dark" id="services" labelledBy="services-heading" pad="lg">
         <Container>
-          <div className="mb-14 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-            <SectionHeading
-              id="services-heading"
-              eyebrow="Our services"
-              title="Six disciplines. One purpose: clearer decisions."
-              lead="Each service applies the same analytical discipline to a different kind of question — from household budgets to complex strategic choices."
-            />
-            <ButtonLink href="/services" variant="secondary">All services</ButtonLink>
+          <div className="mb-14 grid gap-10 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-7">
+              <SectionHeading
+                id="services-heading"
+                eyebrow="Our services"
+                title="Six disciplines. One purpose: clearer decisions."
+                lead="Each service applies the same analytical discipline to a different kind of question — from household budgets to complex strategic choices."
+              />
+              <ButtonLink href="/services" variant="secondary" className="mt-8">All services</ButtonLink>
+            </div>
+            <div className="lg:col-span-5">
+              <GlobeVisual />
+            </div>
           </div>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s, i) => (

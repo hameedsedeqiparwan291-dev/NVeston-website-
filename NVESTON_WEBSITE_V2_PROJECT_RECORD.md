@@ -231,3 +231,17 @@ Review with `npm run build:preview && npm run serve` → http://localhost:4321
 - New tool: pure function + tests in `src/lib/finance/` and `tests/`, page in `src/pages/tools/` using `ToolLayout`, entry in `TOOLS` (catalog) and routes.
 - Founder content (`src/content/founder.js`) and founder head (`founderHead` in `src/site/head.js`) must not change without explicit approval.
 - Do not modify `src/hami-widget/*` or the contact form's submission logic without authorization.
+
+---
+
+## 12. Visual enhancements (2026-11-17, checkpoint tag `v2-pre-visuals`)
+
+| Request | Status | Placement |
+|---|---|---|
+| Financial Intelligence visual | Done — CSS 3D layered planes (context / drivers / decision range), slow float, reduced-motion safe, no assets | Homepage hero, right column (replaces the flat scenario-fan SVG) |
+| Global Market Intelligence visual | Done — canvas dot-matrix globe, real financial-centre coordinates, decorative arcs, ~30 fps, pauses off-screen, static for reduced motion | Homepage "Our services" header, right column |
+| HAMI animated character | **Not done** — cannot be produced to the required 3D-cartoon standard with code-only tools | — |
+| Human-centred business visual | **Not done** — requires photography or professional illustration with usage rights | — |
+
+Files: `src/components/site/visuals.jsx` (new), `src/index.css` (`.fi-*` styles), `src/pages/HomePage.jsx` (two placements).
+To complete the remaining two: supply (a) a HAMI character as a transparent animated WebM/animated WebP plus a static PNG, and (b) a licensed or commissioned editorial photograph (with model release). Both can then be integrated without touching HAMI's functionality.
