@@ -3,6 +3,7 @@
 // =============================================================================
 
 import React from 'react';
+import HamiOrb from './HamiOrb.jsx';
 import { X } from 'lucide-react';
 
 /**
@@ -54,7 +55,7 @@ export default function WidgetLauncher({
           </>
         ) : (
           <>
-            <span className="hami-launcher-avatar" aria-hidden="true">H</span>
+            <span className="hami-launcher-avatar hami-avatar--orb" aria-hidden="true"><HamiOrb size={30} /></span>
             <span className="hami-launcher-label">{config.assistant.launcherLabel}</span>
           </>
         )}

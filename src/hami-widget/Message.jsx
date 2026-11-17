@@ -4,6 +4,7 @@
 // =============================================================================
 
 import React from 'react';
+import HamiOrb from './HamiOrb.jsx';
 import CitationBadge from './CitationBadge.jsx';
 
 // ─── Inline Markdown Renderer ────────────────────────────────────────────────
@@ -120,7 +121,7 @@ function AssistantMessage({ message }) {
   const hasCitations = Array.isArray(message.citations) && message.citations.length > 0;
   return (
     <div className="hami-msg-row hami-msg-row--assistant" role="article" aria-label="HAMI response">
-      <div className="hami-msg-label" aria-hidden="true">HAMI</div>
+      <div className="hami-msg-label" aria-hidden="true"><HamiOrb size={18} />HAMI</div>
       <div className="hami-msg hami-msg--assistant">
         <MarkdownContent text={message.content} />
         {hasCitations && (
@@ -154,7 +155,7 @@ function UserMessage({ message }) {
 function FallbackMessage({ message, onRetry }) {
   return (
     <div className="hami-msg-row hami-msg-row--assistant" role="article" aria-label="HAMI response">
-      <div className="hami-msg-label" aria-hidden="true">HAMI</div>
+      <div className="hami-msg-label" aria-hidden="true"><HamiOrb size={18} />HAMI</div>
       <div className="hami-msg hami-msg--assistant">
         <p className="hami-prose p">{message.content}</p>
         {message.retryText && onRetry && (

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 /* ==========================================================================
    Financial Intelligence visual
@@ -110,12 +110,22 @@ const LAND = [
 const CITIES = {
   newYork: [-74, 40.7], toronto: [-79.4, 43.7], saoPaulo: [-46.6, -23.5], london: [-0.1, 51.5], frankfurt: [8.7, 50.1],
   dubai: [55.3, 25.2], mumbai: [72.9, 19.1], singapore: [103.8, 1.35], hongKong: [114.2, 22.3], tokyo: [139.7, 35.7],
-  sydney: [151.2, -33.9], johannesburg: [28, -26.2],
+  sydney: [151.2, -33.9], johannesburg: [28, -26.2], shanghai: [121.5, 31.2], rotterdam: [4.5, 51.9], losAngeles: [-118.2, 34],
 };
+// Four dimensions of NVeston's analysis. Each groups illustrative connections between
+// real city locations; none represents actual transactions or market activity.
+export const GLOBE_DIMENSIONS = [
+  { id: 'markets', label: 'Financial Markets', text: 'Understand market developments, asset trends and financial risk.' },
+  { id: 'economy', label: 'Global Economy', text: 'Explore how inflation, interest rates and economic developments could affect financial and business decisions.' },
+  { id: 'commerce', label: 'Business & Commerce', text: 'Understand how business activity, international trade and changing operating conditions influence commercial decisions.' },
+  { id: 'capital', label: 'Capital & Risk', text: 'Explore how financing conditions, capital movements and uncertainty shape financial outcomes.' },
+];
+
 const LINKS = [
-  ['newYork', 'london'], ['london', 'frankfurt'], ['london', 'dubai'], ['dubai', 'mumbai'], ['mumbai', 'singapore'],
-  ['singapore', 'hongKong'], ['hongKong', 'tokyo'], ['tokyo', 'newYork'], ['newYork', 'saoPaulo'], ['toronto', 'london'],
-  ['singapore', 'sydney'], ['london', 'johannesburg'], ['frankfurt', 'singapore'],
+  ['newYork', 'london', 'markets'], ['london', 'frankfurt', 'markets'], ['hongKong', 'tokyo', 'markets'], ['tokyo', 'newYork', 'markets'],
+  ['newYork', 'saoPaulo', 'economy'], ['london', 'johannesburg', 'economy'], ['dubai', 'mumbai', 'economy'], ['mumbai', 'singapore', 'economy'],
+  ['shanghai', 'losAngeles', 'commerce'], ['singapore', 'rotterdam', 'commerce'], ['rotterdam', 'newYork', 'commerce'], ['shanghai', 'singapore', 'commerce'],
+  ['toronto', 'london', 'capital'], ['london', 'dubai', 'capital'], ['frankfurt', 'singapore', 'capital'], ['singapore', 'sydney', 'capital'], ['singapore', 'hongKong', 'capital'],
 ];
 
 const RAD = Math.PI / 180;
@@ -159,6 +169,15 @@ function arcPoints(a, b, n = 48) {
 
 export function GlobeVisual() {
   const canvasRef = useRef(null);
+  const [selected, setSelected] = useState(null);
+  const [hovered, setHovered] = useState(null);
+  const active = hovered || selected;
+  const activeRef = useRef(null);
+  const redrawRef = useRef(() => {});
+  useEffect(() => {
+    activeRef.current = active;
+    redrawRef.current();
+  }, [active]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -166,7 +185,8 @@ export function GlobeVisual() {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const dots = buildLandDots();
     const cityVecs = Object.fromEntries(Object.entries(CITIES).map(([k, [lon, lat]]) => [k, toVec(lon, lat)]));
-    const arcs = LINKS.map(([a, b]) => arcPoints(cityVecs[a], cityVecs[b]));
+    const arcs = LINKS.map(([a, b, dim]) => ({ dim, pts: arcPoints(cityVecs[a], cityVecs[b]) }));
+    const citiesFor = (dim) => new Set(LINKS.filter((l) => l[2] === dim).flatMap((l) => [l[0], l[1]]));
     const styles = getComputedStyle(canvas);
     const gold = `hsl(${styles.getPropertyValue('--primary').trim()})`;
     const goldA = (a) => `hsl(${styles.getPropertyValue('--primary').trim()} / ${a})`;
@@ -246,10 +266,12 @@ export function GlobeVisual() {
 
       // Connections with travelling light
       const phase = (time / 4200) % 1;
-      arcs.forEach((pts, i) => {
+      const sel = activeRef.current;
+      arcs.forEach(({ pts, dim }, i) => {
+        const on = !sel || sel === dim;
         const proj = pts.map(project);
-        ctx.strokeStyle = goldA(0.45);
-        ctx.lineWidth = 1.1;
+        ctx.strokeStyle = goldA(sel ? (on ? 0.95 : 0.08) : 0.45);
+        ctx.lineWidth = sel && on ? 1.8 : 1.1;
         ctx.beginPath();
         let started = false;
         proj.forEach(([x, y, z]) => {
@@ -258,7 +280,7 @@ export function GlobeVisual() {
           started = true;
         });
         ctx.stroke();
-        if (!reduce) {
+        if (!reduce && on) {
           const t = (phase + i * 0.17) % 1;
           const [x, y, z] = proj[Math.round(t * (proj.length - 1))];
           if (z > 0.02) {
@@ -271,9 +293,12 @@ export function GlobeVisual() {
       });
 
       // Financial centres
-      Object.values(cityVecs).forEach((v, i) => {
+      const lit = sel ? citiesFor(sel) : null;
+      Object.entries(cityVecs).forEach(([name, v], i) => {
         const [x, y, z] = project(v);
         if (z <= 0) return;
+        const on = !lit || lit.has(name);
+        ctx.globalAlpha = on ? 1 : 0.25;
         const px = cx + x * R;
         const py = cy - y * R;
         const pulse = reduce ? 0.5 : (Math.sin(time / 700 + i) + 1) / 2;
@@ -283,10 +308,12 @@ export function GlobeVisual() {
         ctx.stroke();
         ctx.fillStyle = gold;
         ctx.beginPath();
-        ctx.arc(px, py, 2.4, 0, Math.PI * 2);
+        ctx.arc(px, py, lit && on ? 3.2 : 2.4, 0, Math.PI * 2);
         ctx.fill();
+        ctx.globalAlpha = 1;
       });
     };
+    redrawRef.current = () => draw(performance.now());
 
     let raf = 0;
     let last = 0;
@@ -306,19 +333,57 @@ export function GlobeVisual() {
     io.observe(canvas);
     const onResize = () => { resize(); draw(performance.now()); };
     window.addEventListener('resize', onResize);
-    return () => { stop(); io.disconnect(); window.removeEventListener('resize', onResize); };
+    return () => { stop(); io.disconnect(); window.removeEventListener('resize', onResize); redrawRef.current = () => {}; };
   }, []);
 
+  const current = GLOBE_DIMENSIONS.find((d) => d.id === active);
+  const chip = (d, i) => (
+    <button
+      key={d.id}
+      type="button"
+      aria-pressed={selected === d.id}
+      onClick={() => setSelected(selected === d.id ? null : d.id)}
+      onPointerEnter={(e) => e.pointerType === 'mouse' && setHovered(d.id)}
+      onPointerLeave={(e) => e.pointerType === 'mouse' && setHovered(null)}
+      onFocus={() => setHovered(d.id)}
+      onBlur={() => setHovered(null)}
+      className={`flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-left text-xs font-medium tracking-wide backdrop-blur transition-colors duration-300 ${
+        active === d.id ? 'border-primary bg-primary/15 text-primary' : 'border-border bg-background/70 text-foreground/80 hover:border-primary/60 hover:text-foreground'
+      }`}
+    >
+      <span aria-hidden="true" className="font-display italic text-primary">{String(i + 1).padStart(2, '0')}</span>
+      {d.label}
+    </button>
+  );
+
   return (
-    <figure className="mx-auto w-full max-w-[260px] sm:max-w-[340px] lg:max-w-[420px]">
-      <canvas
-        ref={canvasRef}
-        className="aspect-square w-full"
-        role="img"
-        aria-label="Illustration: a slowly rotating globe with glowing connections between major financial centres such as New York, London, Frankfurt, Dubai, Mumbai, Singapore, Hong Kong, Tokyo and Sydney."
-      />
-      <figcaption className="mt-3 text-center text-xs text-muted-foreground">
-        Illustrative. Lines link major financial centres; they do not represent market data.
+    <figure className="mx-auto w-full max-w-[340px] lg:max-w-[460px]">
+      <div className="relative mx-auto max-w-[260px] sm:max-w-[320px] lg:max-w-[400px]">
+        <canvas
+          ref={canvasRef}
+          className="aspect-square w-full"
+          role="img"
+          aria-label="Illustration: a slowly rotating globe linking major cities across four areas of analysis — financial markets, the global economy, business and commerce, and capital and risk."
+        />
+      </div>
+      <div role="group" aria-label="Explore four dimensions of analysis" className="mt-5 grid grid-cols-2 gap-2">
+        {GLOBE_DIMENSIONS.map(chip)}
+      </div>
+      <div aria-live="polite" className="mt-4 min-h-[4.5rem] rounded-sm border-l-2 border-primary/60 bg-card/60 px-4 py-3">
+        {current ? (
+          <>
+            <p className="text-sm font-medium text-foreground">{current.label}</p>
+            <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{current.text}</p>
+          </>
+        ) : (
+          <>
+            <p className="font-display text-base italic text-foreground">An interconnected world.</p>
+            <p className="mt-1 text-xs leading-relaxed text-muted-foreground">Intelligence that connects the bigger picture. Select a dimension to explore it.</p>
+          </>
+        )}
+      </div>
+      <figcaption className="mt-3 text-center text-[0.7rem] leading-relaxed text-muted-foreground">
+        Illustrative. Connections between major cities represent areas of analysis — not transactions, real-time market activity or NVeston’s business network.
       </figcaption>
     </figure>
   );

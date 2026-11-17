@@ -3,6 +3,7 @@
 // =============================================================================
 
 import React from 'react';
+import HamiOrb from './HamiOrb.jsx';
 
 export default function TypingIndicator() {
   return (
@@ -12,7 +13,7 @@ export default function TypingIndicator() {
       aria-label="HAMI is typing"
       aria-live="polite"
     >
-      <div className="hami-msg-label" aria-hidden="true">HAMI</div>
+      <div className="hami-msg-label" aria-hidden="true"><HamiOrb size={18} active />HAMI</div>
       <div className="hami-typing" aria-hidden="true">
         <span className="hami-dot" />
         <span className="hami-dot" />

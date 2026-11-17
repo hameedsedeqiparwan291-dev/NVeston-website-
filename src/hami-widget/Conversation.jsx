@@ -5,6 +5,7 @@
 // =============================================================================
 
 import React, { useEffect, useRef } from 'react';
+import HamiOrb from './HamiOrb.jsx';
 import Message           from './Message.jsx';
 import SuggestedQuestions from './SuggestedQuestions.jsx';
 import TypingIndicator   from './TypingIndicator.jsx';
@@ -12,25 +13,13 @@ import ConsultationCard  from './ConsultationCard.jsx';
 
 // ─── NVeston "N" Mark ────────────────────────────────────────────────────────
 
-function NMark() {
-  return (
-    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
-      <path
-        d="M5 22V4L14 17.5V4h2.5v18L8 8.5V22H5Z"
-        fill="white"
-        opacity="0.95"
-      />
-    </svg>
-  );
-}
-
 // ─── Welcome State ────────────────────────────────────────────────────────────
 
 function WelcomeState({ config, onSelect }) {
   return (
     <div className="hami-welcome">
       <div className="hami-welcome-logo" aria-hidden="true">
-        <NMark />
+        <HamiOrb size={44} />
       </div>
       <h2 className="hami-welcome-title">{config.assistant.welcomeTitle}</h2>
       <p className="hami-welcome-body">{config.assistant.welcomeBody}</p>

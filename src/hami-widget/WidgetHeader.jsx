@@ -3,6 +3,7 @@
 // =============================================================================
 
 import React from 'react';
+import HamiOrb from './HamiOrb.jsx';
 import { RotateCcw, X } from 'lucide-react';
 
 /**
@@ -17,7 +18,7 @@ export default function WidgetHeader({ config, onClose, onReset }) {
     <div className="hami-header">
       {/* Identity */}
       <div className="hami-header-identity">
-        <div className="hami-header-avatar" aria-hidden="true">H</div>
+        <div className="hami-header-avatar hami-avatar--orb" aria-hidden="true"><HamiOrb size={32} /></div>
         <div className="hami-header-text">
           <span className="hami-header-name">{config.assistant.name}</span>
           <span className="hami-header-subtitle">
