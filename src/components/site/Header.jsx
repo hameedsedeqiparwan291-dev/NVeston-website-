@@ -96,7 +96,7 @@ export default function Header({ route }) {
       <div className="container-site flex h-[4.5rem] items-center justify-between gap-6">
         <a href="/" className="flex shrink-0 items-center gap-3" aria-label="NVeston home">
           <img src="/brand/nveston-logo-96.png" alt="" width="44" height="44" className="h-11 w-11 rounded-[2px]" />
-          <span className="hidden font-display text-lg tracking-wide text-foreground sm:inline">NVeston</span>
+          <span className="hidden font-display text-lg tracking-wide text-foreground sm:inline lg:hidden xl:inline">NVeston</span>
         </a>
 
         <nav aria-label="Main" className="hidden lg:block">
@@ -111,11 +111,11 @@ export default function Header({ route }) {
                     aria-expanded={open === g.key}
                     aria-controls="nav-panel"
                     onClick={() => setOpen(open === g.key ? null : g.key)}
-                    className={`relative flex items-center gap-1 px-3 py-2 text-[0.8rem] font-medium uppercase tracking-[0.08em] transition-colors hover:text-primary ${open === g.key || isActive ? 'text-primary' : 'text-foreground/80'}`}
+                    className={`relative flex items-center gap-1 whitespace-nowrap px-2.5 py-2 text-[0.78rem] font-medium uppercase tracking-[0.06em] xl:px-3 xl:tracking-[0.08em] transition-colors hover:text-primary ${open === g.key || isActive ? 'text-primary' : 'text-foreground/80'}`}
                   >
                     {g.label}
                     <ChevronDown size={14} aria-hidden="true" className={`transition-transform duration-300 ${open === g.key ? 'rotate-180' : ''}`} />
-                    {isActive && <span aria-hidden="true" className="absolute inset-x-3 -bottom-[1.05rem] h-px bg-primary" />}
+                    {isActive && <span aria-hidden="true" className="absolute inset-x-2.5 -bottom-[1.05rem] h-px bg-primary" />}
                   </button>
                 </li>
               );
@@ -124,7 +124,7 @@ export default function Header({ route }) {
               <a
                 href="/contact"
                 aria-current={current === '/contact' ? 'page' : undefined}
-                className={`relative block px-3 py-2 text-[0.8rem] font-medium uppercase tracking-[0.08em] transition-colors hover:text-primary ${route?.section === 'contact' ? 'text-primary' : 'text-foreground/80'}`}
+                className={`relative block whitespace-nowrap px-2.5 py-2 text-[0.78rem] font-medium uppercase tracking-[0.06em] xl:px-3 xl:tracking-[0.08em] transition-colors hover:text-primary ${route?.section === 'contact' ? 'text-primary' : 'text-foreground/80'}`}
               >
                 Contact
               </a>
