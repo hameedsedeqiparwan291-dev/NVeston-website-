@@ -38,7 +38,7 @@ export default function BreakEvenTool({ route }) {
           {r.contributionMargin === 0
             ? 'Each unit sells for exactly what it costs to produce, so no amount of sales can cover your fixed costs.'
             : `Each unit costs ${formatCurrency(r.lossPerUnit, { cents: true })} more to produce than it sells for, so every additional sale increases the loss.`}{' '}
-          The price, the variable cost — or both — would need to change before volume can help.
+          The price, the variable cost or both would need to change before volume can help.
         </Notice>
         <dl className="grid gap-4 sm:grid-cols-2">
           <Stat label="Contribution per unit" value={formatCurrency(r.contributionMargin, { cents: true })} tone="negative" />
@@ -53,7 +53,7 @@ export default function BreakEvenTool({ route }) {
       <div className="space-y-8">
         <div aria-live="polite" className="rounded-sm border-l-2 border-primary bg-card p-6">
           <p className="font-display text-xl leading-snug md:text-2xl">
-            You need to sell {formatNumber(r.breakEvenUnits)} {r.breakEvenUnits === 1 ? 'unit' : 'units'} a month — about {formatCurrency(r.breakEvenRevenue)} in revenue — to cover your costs.
+            You need to sell {formatNumber(r.breakEvenUnits)} {r.breakEvenUnits === 1 ? 'unit' : 'units'} a month, about {formatCurrency(r.breakEvenRevenue)} in revenue, to cover your costs.
           </p>
           <p className="mt-3 text-sm font-light text-muted-foreground">
             Each unit contributes {formatCurrency(r.contributionMargin, { cents: true })} ({formatPercent(r.contributionRatio)} of its price) toward fixed costs and profit.
@@ -113,7 +113,7 @@ export default function BreakEvenTool({ route }) {
         'Assumes one product or an average across products; a mix of products with different margins will change the result.',
         'Assumes price and variable cost stay constant at every volume, with no discounts or capacity limits.',
         'Fixed costs often step up as a business grows (another hire, a larger space).',
-        'Break-even is about profit, not cash — timing of payments still matters.',
+        'Break-even measures profit. The timing of payments, which drives cash, still matters.',
       ]}
     />
   );

@@ -56,7 +56,7 @@ export const ARTICLES = [
   },
   {
     slug: 'what-market-volatility-tells-you',
-    title: 'What Market Volatility Tells You — and What It Does Not',
+    title: 'What Market Volatility Tells You, and What It Does Not',
     category: 'financial-markets',
     summary: 'Volatility describes how much prices move, not which direction they will go next. Understanding the difference helps you read market news more calmly.',
     status: 'draft',

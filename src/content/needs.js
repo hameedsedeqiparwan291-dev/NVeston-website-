@@ -1,4 +1,4 @@
-// "How can NVeston help you?" — guides visitors to relevant content.
+// "How can NVeston help you?" guides visitors to relevant content.
 // It routes to pages and tools; it never makes financial recommendations.
 
 export const NEEDS = [
@@ -19,7 +19,7 @@ export const NEEDS = [
     services: ['personal-financial-services', 'risk-scenario-analysis'],
     tool: 'financial-resilience',
     segment: 'individuals',
-    nextStep: 'Start with the Financial Resilience Assessment — it takes about two minutes and nothing you enter leaves your browser.',
+    nextStep: 'Start with the Financial Resilience Assessment. It takes about two minutes, and nothing you enter leaves your browser.',
     topic: 'cashflow',
   },
   {
@@ -49,7 +49,7 @@ export const NEEDS = [
     challenges: [
       'Uncertain start-up costs and runway',
       'Not knowing how much you must sell to break even',
-      'Deciding whether — and how — to finance it',
+      'Deciding whether and how to finance it',
     ],
     capabilities: [
       'Start-up cost and runway analysis',
@@ -79,7 +79,7 @@ export const NEEDS = [
     services: ['financial-markets-portfolio-intelligence', 'macro-market-intelligence'],
     tool: null,
     segment: 'market-participants',
-    nextStep: 'Explore Financial Markets & Portfolio Intelligence to see what NVeston’s research covers — and what it deliberately does not.',
+    nextStep: 'Explore Financial Markets & Portfolio Intelligence to see the research and analysis NVeston provides.',
     topic: 'analysis',
   },
   {

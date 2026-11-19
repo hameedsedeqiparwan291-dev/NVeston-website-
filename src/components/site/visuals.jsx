@@ -19,7 +19,7 @@ function Plane({ z, children, className = '', delay = '0s' }) {
 
 export function FinancialIntelligenceVisual() {
   return (
-    <figure className="fi-root" role="img" aria-label="Illustration: three layered analytical planes — market context, the drivers behind it, and a range of possible outcomes for one decision.">
+    <figure className="fi-root" role="img" aria-label="Illustration: three layered analytical planes showing market context, the drivers behind it and a range of possible outcomes for one decision.">
       <div className="fi-stage" aria-hidden="true">
         <div className="fi-scene">
           {/* Base plane: market context */}
@@ -74,7 +74,7 @@ export function FinancialIntelligenceVisual() {
         </div>
       </div>
       <figcaption className="mt-3 text-xs text-muted-foreground">
-        Illustrative. Context, drivers and a range of outcomes — the layers of a well-informed decision.
+        Illustrative. Context, drivers and a range of outcomes: the layers of a well-informed decision.
       </figcaption>
     </figure>
   );
@@ -363,7 +363,7 @@ export function GlobeVisual() {
           ref={canvasRef}
           className="aspect-square w-full"
           role="img"
-          aria-label="Illustration: a slowly rotating globe linking major cities across four areas of analysis — financial markets, the global economy, business and commerce, and capital and risk."
+          aria-label="Illustration: a slowly rotating globe linking major cities across four areas of analysis: financial markets, the global economy, business and commerce, and capital and risk."
         />
       </div>
       <div role="group" aria-label="Explore four dimensions of analysis" className="mt-5 grid grid-cols-2 gap-2">
@@ -383,7 +383,7 @@ export function GlobeVisual() {
         )}
       </div>
       <figcaption className="mt-3 text-center text-[0.7rem] leading-relaxed text-muted-foreground">
-        Illustrative. Connections between major cities represent areas of analysis — not transactions, real-time market activity or NVeston’s business network.
+        Illustrative. Connections between major cities represent areas of analysis. They are not transactions, real-time market activity or NVeston’s business network.
       </figcaption>
     </figure>
   );

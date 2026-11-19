@@ -16,7 +16,7 @@ export default function CashFlowTool({ route }) {
       <NumberField id="cf-start" label="Cash in the bank today" prefix="$" {...bind('startingCash')} error={errors.startingCash} />
       <NumberField id="cf-sales" label="Current monthly sales" prefix="$" {...bind('monthlySales')} error={errors.monthlySales} />
       <NumberField id="cf-growth" label="Monthly change in sales" suffix="%" {...bind('salesGrowthPct')} error={errors.salesGrowthPct} hint="Growth of 4% means each month’s sales are 4% higher than the last. Use a negative number for a decline." />
-      <NumberField id="cf-var" label="Variable costs" suffix="% of sales" {...bind('variableCostPct')} error={errors.variableCostPct} hint="Costs that rise with sales — materials, stock, delivery — paid in the month incurred." />
+      <NumberField id="cf-var" label="Variable costs" suffix="% of sales" {...bind('variableCostPct')} error={errors.variableCostPct} hint="Costs that rise with sales, such as materials, stock and delivery, paid in the month incurred." />
       <NumberField id="cf-fixed" label="Fixed monthly costs" prefix="$" {...bind('fixedCosts')} error={errors.fixedCosts} hint="Rent, salaries, software and other costs that do not change with sales." />
       <NumberField id="cf-fin" label="Monthly loan payments" prefix="$" {...bind('financingPayment')} error={errors.financingPayment} />
       <NumberField id="cf-delay" label="Customer payment delay" suffix="months" decimals={false} {...bind('paymentDelayMonths')} error={errors.paymentDelayMonths} hint="0 = paid immediately; 2 = customers pay about two months after the sale (0–3)." />
@@ -46,7 +46,7 @@ export default function CashFlowTool({ route }) {
         </div>
         {r.firstShortfallMonth && (
           <Notice tone="warning" title={`Projected cash shortfall in month ${r.firstShortfallMonth}`}>
-            Under these assumptions the bank balance falls below zero in month {r.firstShortfallMonth}, reaching a low of {formatCurrency(r.lowestBalance)} in month {r.lowestMonth}. In practice this gap would need to be covered — for example by a credit line, faster collections, slower growth or lower costs.
+            Under these assumptions the bank balance falls below zero in month {r.firstShortfallMonth}, reaching a low of {formatCurrency(r.lowestBalance)} in month {r.lowestMonth}. In practice this gap would need to be covered, for example by a credit line, faster collections, slower growth or lower costs.
           </Notice>
         )}
         <dl className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -103,7 +103,7 @@ export default function CashFlowTool({ route }) {
     <ToolLayout
       route={route}
       slug="cash-flow"
-      lead="Follow your cash month by month and see the difference between profit and cash — including why a growing, profitable business can still run short."
+      lead="Follow your cash month by month and see the difference between profit and cash, including why a growing, profitable business can still run short."
       inputs={inputs}
       results={results}
       related={['business-profitability', 'break-even', 'debt-financing']}

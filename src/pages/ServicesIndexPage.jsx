@@ -55,7 +55,7 @@ export default function ServicesIndexPage({ route }) {
             {[
               ['lock', 'Your information stays private', 'We ask only for what the analysis needs, and never for account passwords or logins.'],
               ['scale', 'Scope agreed in advance', 'Engagement scope and fees depend on your needs and are agreed with you before work begins.'],
-              ['file', 'Clear boundaries', 'Analysis and education — not investment management, securities recommendations, tax or legal advice.'],
+              ['file', 'Transparent standards', 'Our Important Disclosures set out NVeston’s regulatory status and the scope of every service.'],
             ].map(([icon, t, d]) => (
               <div key={t} className="flex gap-4" data-reveal>
                 <Icon name={icon} className="mt-1 shrink-0 text-primary" />
@@ -71,7 +71,7 @@ export default function ServicesIndexPage({ route }) {
 
       <CtaBand
         title="Not sure which service fits?"
-        text="Most people do not think in service categories — they think in problems. Tell us what you are trying to decide and we will suggest where to start."
+        text="Most people think in terms of problems rather than service categories. Tell us what you are trying to decide and we will suggest where to start."
         primary={{ href: contactHref('consultation'), label: 'Request an introductory consultation' }}
         secondary={{ href: '/who-we-serve', label: 'Browse by situation' }}
       />

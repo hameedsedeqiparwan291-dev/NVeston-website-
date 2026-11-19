@@ -36,7 +36,7 @@ export default function ArticlePage({ route }) {
   const url = absoluteUrl(route.path);
   const dateLabel = a.publishedDate
     ? new Date(`${a.publishedDate}T12:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })
-    : 'Draft — not yet published';
+    : 'Draft, not yet published';
 
   return (
     <>

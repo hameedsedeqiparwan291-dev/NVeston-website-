@@ -24,7 +24,7 @@ export default function SegmentsIndexPage({ route }) {
                   <h2 className="font-display text-2xl font-medium leading-snug">{d.headline}</h2>
                   <p className="mt-3 font-light leading-relaxed text-muted-foreground">{s.short}</p>
                   <ul className="mt-6 flex-1 space-y-2 text-sm text-foreground/85">
-                    {d.concerns.slice(0, 3).map((c) => <li key={c.title}>— {c.title}</li>)}
+                    {d.concerns.slice(0, 3).map((c) => <li key={c.title} className="flex gap-3"><span aria-hidden="true" className="mt-[0.6em] h-px w-3 shrink-0 bg-primary" /><span>{c.title}</span></li>)}
                   </ul>
                   <TextLink href={`/who-we-serve/${s.slug}`} className="mt-8">How we help {s.navName.toLowerCase()}</TextLink>
                 </article>

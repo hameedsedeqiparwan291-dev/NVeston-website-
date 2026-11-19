@@ -30,7 +30,7 @@ export default function Layout({ route, children }) {
     <>
       <a href="#main" className="skip-link">Skip to main content</a>
       {route?.draft && (
-        <DraftBanner>Draft — this publication is awaiting founder review and is excluded from production builds.</DraftBanner>
+        <DraftBanner>Draft. This publication is awaiting founder review and is excluded from production builds.</DraftBanner>
       )}
       <Header route={route} />
       <main id="main" tabIndex={-1} className="focus:outline-none">

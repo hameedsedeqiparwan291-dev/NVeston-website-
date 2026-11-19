@@ -31,8 +31,8 @@ export default function ContactPage({ route }) {
           <h2 className="mb-10 font-display text-3xl font-medium">How an introductory consultation works</h2>
           <StepList steps={STEPS} />
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <Notice title="What the consultation is — and is not">
-              It is an introductory discussion to understand your needs and whether NVeston can appropriately assist. It is not investment advice, portfolio management or the start of a formal engagement, which would be agreed separately in writing.
+            <Notice title="About the introductory consultation">
+              It is an introductory discussion to understand your needs and how NVeston can help. Any formal engagement, with its scope and fees, is agreed separately in writing.
             </Notice>
             <Notice title="Your privacy">
               Please do not include account numbers, passwords, Social Security numbers or financial statements. Your message is delivered securely to {ORG.email}. See our <a className="text-primary underline underline-offset-4" href="/policies/privacy">Privacy Policy</a>.

@@ -33,7 +33,7 @@ const REQUEST_TIMEOUT = 30_000; // 30 s
 
 const FALLBACK_RESPONSES = {
   backend_offline:
-    "I'm temporarily unavailable due to a service interruption. Please try again shortly — I look forward to continuing our conversation.",
+    "I'm temporarily unavailable due to a service interruption. Please try again shortly. I look forward to continuing our conversation.",
 
   connection_error:
     "I'm experiencing a temporary connection issue while preparing a response. Please try your question again in a few moments. If your matter is time-sensitive, you're also welcome to request a consultation with the NVeston team.",
@@ -45,10 +45,10 @@ const FALLBACK_RESPONSES = {
     "This request is taking longer than expected. Please try again in a moment, and we'll continue where we left off.",
 
   server_error:
-    "I'm experiencing a temporary service issue. Please try again shortly — I'll be ready to assist with your question.",
+    "I'm experiencing a temporary service issue. Please try again shortly, and I'll be ready to help with your question.",
 
   invalid_json:
-    "I encountered an issue processing your request. Please try again — this is usually resolved within moments.",
+    "I encountered an issue processing your request. Please try again. This is usually resolved within moments.",
 
   client_network:
     "It looks like your internet connection may have been interrupted. Please check your connection and try again.",

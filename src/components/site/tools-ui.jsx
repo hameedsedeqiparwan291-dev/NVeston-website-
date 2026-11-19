@@ -114,7 +114,7 @@ export function ToolLayout({ route, slug, title, lead, inputs, results, assumpti
               <h2 className="mb-5 font-display text-2xl font-medium">Limitations</h2>
               <BulletList items={limitations} />
               <Notice className="mt-8">
-                This tool is for education and general analysis only. Results depend entirely on the figures you enter and the simplified assumptions shown. They are not financial, tax, lending or investment advice, and actual outcomes will differ.
+                Results are estimates based on the figures you enter and the simplified assumptions shown, and actual outcomes will differ. They are not financial, tax, lending or investment advice. See our <a className="text-primary underline underline-offset-4" href="/policies/disclosures">Important Disclosures</a>.
               </Notice>
             </div>
           </div>

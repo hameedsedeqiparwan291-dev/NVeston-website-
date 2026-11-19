@@ -58,6 +58,7 @@ for (const file of files) {
   }
   for (const m of html.matchAll(/<img\b[^>]*>/g)) if (!/\balt="/.test(m[0])) flag('img without alt');
   if (/>\s*(undefined|NaN|null)\s*</.test(html)) flag('renders undefined/NaN/null');
+  if (html.includes('set on publication')) flag('policy effective date not set (set EFFECTIVE_DATE in src/content/legal.js at release)');
 
   const body = html.split('<body>')[1] || '';
   for (const m of body.matchAll(/href="([^"]+)"/g)) {

@@ -2,36 +2,37 @@ export const FAQ_GROUPS = [
   {
     title: 'About NVeston',
     items: [
-      { q: 'What does NVeston do?', a: 'NVeston provides financial analysis, education and strategic decision support. We help individuals, businesses and entrepreneurs understand their financial position, test the options in front of them and see the trade-offs and risks clearly — explained in plain language.' },
-      { q: 'Is NVeston a registered investment adviser or a bank?', a: 'No. NVeston LLC is registered as a Massachusetts limited liability company, which is a corporate registration only. It is not registered as an investment adviser, broker-dealer, bank or other regulated financial institution. See our Important Disclosures for details.' },
+      { q: 'What does NVeston do?', a: 'NVeston is a financial intelligence and strategic advisory firm. We analyze financial positions, business performance, economic conditions and market developments, and we help individuals, business owners and entrepreneurs evaluate their options and make well-informed decisions.' },
+      { q: 'Who does NVeston work with?', a: 'Individuals and households, small businesses, entrepreneurs and founders, and people who want a deeper understanding of markets and the economy.' },
       { q: 'Where is NVeston based?', a: 'NVeston LLC is a Massachusetts company. It operates on a remote-first basis within the United States.' },
       { q: 'Who leads NVeston?', a: 'NVeston is led by Hamidullah Nazari, Founder & Managing Member. You can read more on the Founder & Leadership page.' },
+      { q: 'What is NVeston’s regulatory status?', a: 'NVeston LLC is registered as a Massachusetts limited liability company. That is a corporate registration; NVeston is not registered as an investment adviser, broker-dealer, bank or other regulated financial institution. Our Important Disclosures explain this in full.' },
     ],
   },
   {
-    title: 'Services and boundaries',
+    title: 'Services and engagements',
     items: [
-      { q: 'Will NVeston tell me which investments to buy?', a: 'No. NVeston does not provide personalized securities recommendations, asset allocations, trading signals or portfolio management. Our market work is research and education. For personal investment advice, consult an appropriately registered professional.' },
-      { q: 'Do you provide tax, accounting or legal services?', a: 'No. We analyze financial information to support decisions, and we will tell you when a question needs a qualified accountant, tax professional or lawyer.' },
-      { q: 'How much do your services cost?', a: 'It depends on what you need. The scope of an engagement and its fees are discussed and agreed with you in writing before any work begins. The introductory consultation is the place to start that conversation.' },
-      { q: 'Do I have to be wealthy or run a large company?', a: 'Not at all. Much of our work is with individuals and small businesses, for whom clear financial understanding can make the biggest difference.' },
+      { q: 'Does NVeston provide investment advice?', a: 'NVeston provides market research and financial analysis. It does not provide personalized securities recommendations, asset allocation, trading signals or portfolio management. For personal investment decisions, work with an appropriately registered investment professional.' },
+      { q: 'How does NVeston work alongside my accountant or lawyer?', a: 'Accountants, tax professionals and lawyers handle compliance, filings and legal structure. NVeston analyzes financial information to support decisions, and we will point out when a question belongs with one of those specialists.' },
+      { q: 'How much do your services cost?', a: 'Fees depend on the scope of the work. Scope and fees are discussed and agreed with you in writing before any engagement begins, and the introductory consultation is the place to start that conversation.' },
+      { q: 'Do I need to be a large business or have significant wealth?', a: 'Not at all. Much of our work is with individuals and small businesses, for whom a clear financial picture often makes the biggest difference.' },
     ],
   },
   {
     title: 'Consultations',
     items: [
-      { q: 'What is the introductory consultation?', a: 'A 15-minute conversation to understand your situation and the decision you are facing, and to discuss whether and how NVeston could help. It is an introduction, not a formal engagement or advice session.' },
-      { q: 'How do I book one?', a: 'Use the contact form to share your preferred date, time and time zone, plus an optional alternative. We will review your request and follow up by email to confirm a mutually convenient time. Requests are not confirmed automatically.' },
-      { q: 'What should I prepare?', a: 'Just a short description of what you would like to discuss. Please do not send account numbers, passwords, Social Security numbers or financial statements through the form.' },
+      { q: 'What is the introductory consultation?', a: 'A 15-minute conversation to understand your situation and the decision in front of you, and to discuss whether and how NVeston can help. A formal engagement, if you choose one, is agreed separately.' },
+      { q: 'How do I book one?', a: 'Use the contact form to share your preferred date, time and time zone, along with an optional alternative. We review each request and reply by email to confirm a time that works for both of us.' },
+      { q: 'What should I prepare?', a: 'A short description of what you would like to discuss is enough. Please leave out account numbers, passwords, Social Security numbers and financial statements.' },
     ],
   },
   {
     title: 'Tools, HAMI and privacy',
     items: [
-      { q: 'Are the calculators really private?', a: 'Yes. The calculations run entirely in your browser. The figures you enter are not stored by NVeston or sent anywhere.' },
-      { q: 'How accurate are the tools?', a: 'They use standard formulas, which we test against independently calculated examples, but they rely on simplified assumptions explained on each page. They are for education and first estimates — not quotes, plans or recommendations.' },
-      { q: 'What is HAMI?', a: 'HAMI is NVeston’s AI assistant. It can answer general questions about NVeston and its services. Its answers are generated automatically and are not personalized advice; please confirm anything important with us directly.' },
-      { q: 'Do you use tracking cookies?', a: 'No. NVeston does not currently use analytics, advertising or tracking cookies on this website. See our Privacy Policy for how information you send us is handled.' },
+      { q: 'Are the calculators private?', a: 'Yes. The calculations run in your browser, and the figures you enter are not sent to NVeston or stored by us.' },
+      { q: 'How accurate are the tools?', a: 'They use standard formulas, tested against independently calculated examples. Each tool explains its assumptions, and the results are estimates intended for analysis and first planning, not quotes or recommendations.' },
+      { q: 'What is HAMI?', a: 'HAMI is NVeston’s AI assistant. It answers general questions about NVeston, explains our services and helps you find relevant tools and resources. Its answers are generated automatically, so please confirm anything important with us directly.' },
+      { q: 'Do you use tracking cookies?', a: 'No. NVeston does not currently use analytics, advertising or tracking cookies on this website. Our Privacy Policy explains how information you send us is handled.' },
     ],
   },
 ];

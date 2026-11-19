@@ -42,8 +42,8 @@ const SK_REMINDER = 'hami_reminder_shown';  // Set after reminder is displayed
 
 const WELCOME_TEXT = [
   'Welcome to NVeston!',
-  "I'm HAMI, NVeston's Strategic Advisory Assistant.",
-  "I'm here to answer your questions, explain our services, and help you explore investment and capital allocation decisions with confidence.",
+  "I'm HAMI, NVeston's AI assistant.",
+  "I can answer general questions about NVeston, explain our services and point you to useful tools and resources.",
   'How can I help you today?',
 ].join('\n');
 

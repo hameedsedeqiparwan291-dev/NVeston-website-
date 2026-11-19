@@ -26,7 +26,7 @@ export default function ResilienceTool({ route }) {
   const inputs = (
     <>
       <NumberField id="fr-income" label="Monthly take-home income" prefix="$" {...bind('monthlyIncome')} error={show('monthlyIncome')} hint="After tax. If it varies, use a typical or cautious month." />
-      <NumberField id="fr-essential" label="Essential monthly expenses" prefix="$" {...bind('essentialExpenses')} error={show('essentialExpenses')} hint="Housing, utilities, food, transport, insurance — costs you cannot easily stop." />
+      <NumberField id="fr-essential" label="Essential monthly expenses" prefix="$" {...bind('essentialExpenses')} error={show('essentialExpenses')} hint="Housing, utilities, food, transport and insurance: the costs you cannot easily stop." />
       <NumberField id="fr-debt" label="Monthly debt payments" prefix="$" {...bind('debtPayments')} error={show('debtPayments')} hint="Minimum payments on loans and cards. Enter 0 if none." />
       <NumberField id="fr-savings" label="Savings you could access quickly" prefix="$" {...bind('emergencySavings')} error={show('emergencySavings')} hint="Cash or savings available within days, without penalties." />
       <ChoiceField name="fr-stability" legend="How predictable is your income?" options={STABILITY_OPTIONS} value={incomeStability} onChange={setStability} error={show('incomeStability')} />
@@ -41,7 +41,7 @@ export default function ResilienceTool({ route }) {
     <div className="rounded-sm border border-dashed border-border bg-card p-8">
       <h2 className="font-display text-2xl">An educational check, not a score.</h2>
       <p className="mt-4 max-w-xl font-light leading-relaxed text-muted-foreground">
-        Answer six short questions. You will see plain-language observations about your reserves, debt, monthly breathing room, income stability and spending flexibility — and why each matters.
+        Answer six short questions. You will see plain-language observations about your reserves, debt, monthly breathing room, income stability and spending flexibility, with an explanation of why each matters.
       </p>
       <p className="mt-4 max-w-xl text-sm font-light leading-relaxed text-muted-foreground">
         Use approximate figures; precision is not needed. Nothing you enter is saved or sent anywhere.
@@ -76,7 +76,7 @@ export default function ResilienceTool({ route }) {
     <ToolLayout
       route={route}
       slug="financial-resilience"
-      lead="A short, private and educational look at how well your finances could absorb a shock — with observations explained in plain language."
+      lead="A short, private look at how well your finances could absorb a shock, with observations explained in plain language."
       inputs={inputs}
       results={results}
       related={['debt-financing', 'cash-flow']}

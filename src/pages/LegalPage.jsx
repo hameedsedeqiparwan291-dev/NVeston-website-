@@ -1,5 +1,5 @@
 import React from 'react';
-import { LEGAL_DOCS } from '../content/legal.js';
+import { LEGAL_DOCS, EFFECTIVE_DATE } from '../content/legal.js';
 import { SHOW_DRAFTS } from '../site/config.js';
 import { Section, Container, Breadcrumbs, Notice } from '../components/site/ui.jsx';
 
@@ -19,9 +19,15 @@ export default function LegalPage({ route }) {
           <div className="lg:col-span-8">
             <h1 className="font-display text-4xl font-medium tracking-tight md:text-5xl">{doc.title}</h1>
             <p className="mt-6 max-w-measure text-lg font-light leading-relaxed text-muted-foreground">{doc.intro}</p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Effective date:{' '}
+              {EFFECTIVE_DATE
+                ? new Date(`${EFFECTIVE_DATE}T12:00:00Z`).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })
+                : 'set on publication'}
+            </p>
             {SHOW_DRAFTS && (
-              <Notice tone="draft" className="mt-8" title="Review required (visible in development previews only)">
-                This document is a draft prepared for founder and qualified legal review before publication.
+              <Notice tone="draft" className="mt-8" title="Review status (visible in development previews only)">
+                Internal executive review completed. Independent legal counsel review has not yet taken place.
               </Notice>
             )}
             <div className="prose-nv mt-10">

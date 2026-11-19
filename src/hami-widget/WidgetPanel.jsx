@@ -26,7 +26,7 @@ export default function WidgetPanel({ chat, onClose, focusSignal = 0, config }) 
       className="hami-panel"
       role="dialog"
       aria-modal="true"
-      aria-label={`${config.assistant.name} — ${config.assistant.subtitle}`}
+      aria-label={`${config.assistant.name}, ${config.assistant.subtitle}`}
     >
       {/* Gold accent bar */}
       <div className="hami-panel-accent" aria-hidden="true" />

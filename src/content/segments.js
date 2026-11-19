@@ -6,13 +6,13 @@ export const SEGMENT_DETAILS = {
     concerns: [
       { title: 'Money seems to disappear', text: 'Income is reasonable, yet little is left at the end of each month and it is hard to say exactly why.' },
       { title: 'Debt feels heavy', text: 'Several balances, different rates and minimum payments that make it difficult to see the real cost or the fastest way out.' },
-      { title: 'A big decision is coming', text: 'A home, a car, a career change or a family milestone — and uncertainty about what you can truly afford.' },
+      { title: 'A big decision is coming', text: 'A home, a car, a career change or a family milestone, and real uncertainty about what you can afford.' },
       { title: 'Not enough of a cushion', text: 'The bills are paid, but an unexpected expense or a gap in income would quickly cause strain.' },
     ],
     help: [
       { slug: 'personal-financial-services', text: 'A clear map of your income, spending, debt and resilience, and side-by-side comparisons of the decisions you are weighing.' },
       { slug: 'macro-market-intelligence', text: 'What inflation and interest rates mean for your savings, your borrowing and your long-term plans.' },
-      { slug: 'risk-scenario-analysis', text: 'How your finances would hold up if income fell or costs rose — and what preparation would help most.' },
+      { slug: 'risk-scenario-analysis', text: 'How your finances would hold up if income fell or costs rose, and which preparations would help most.' },
     ],
     example: {
       title: 'Paying down debt or building savings first?',
@@ -24,7 +24,7 @@ export const SEGMENT_DETAILS = {
   'small-businesses': {
     eyebrow: 'Small Businesses',
     headline: 'Know where your business really stands.',
-    lead: 'You run the business every day. NVeston helps you see its finances clearly — profit, cash and costs — so your decisions are based on numbers you understand.',
+    lead: 'You run the business every day. NVeston gives you a clear view of its profit, cash and costs, so every decision rests on numbers you understand.',
     concerns: [
       { title: 'Busy, but cash is tight', text: 'Sales are growing, yet paying suppliers and payroll on time feels harder, not easier.' },
       { title: 'Margins are slipping', text: 'Costs keep rising and it is not clear which prices, products or customers still make money.' },
@@ -38,7 +38,7 @@ export const SEGMENT_DETAILS = {
     ],
     example: {
       title: 'Profitable on paper, short of cash in practice',
-      text: 'A business sells $50,000 a month and makes a healthy profit, but customers pay 60 days after invoicing while staff and suppliers are paid within the month. When sales grow, the business must fund more work before the cash arrives — so the bank balance can fall even as profit rises. Seeing this pattern in advance turns a crisis into a planning question: a credit line, revised payment terms or a slower growth pace.',
+      text: 'A business sells $50,000 a month and makes a healthy profit, but customers pay 60 days after invoicing while staff and suppliers are paid within the month. When sales grow, the business must fund more work before the cash arrives, so the bank balance can fall even as profit rises. Seeing this pattern in advance turns a crisis into a planning question: a credit line, revised payment terms or a slower growth pace.',
     },
     tools: ['cash-flow', 'business-profitability', 'break-even'],
     topic: 'cashflow',
@@ -49,7 +49,7 @@ export const SEGMENT_DETAILS = {
     lead: 'A new venture asks for your savings, your time and often borrowed money. NVeston helps you understand what it will cost, how long it may take to break even and what happens if things go slower than planned.',
     concerns: [
       { title: 'How much will it really cost?', text: 'Start-up costs, the months before revenue arrives and the cushion needed for surprises.' },
-      { title: 'When will it pay for itself?', text: 'The sales volume and pricing needed to cover costs — and whether that is realistic.' },
+      { title: 'When will it pay for itself?', text: 'The sales volume and pricing needed to cover costs, and whether those targets are realistic.' },
       { title: 'Which model works best?', text: 'Different pricing, channels or cost structures that change the economics of the business.' },
       { title: 'Should I borrow or raise funds?', text: 'What financing would cost, what it commits you to and how it changes your risk.' },
     ],
@@ -82,10 +82,10 @@ export const SEGMENT_DETAILS = {
     ],
     example: {
       title: 'Volatility is not the same as direction',
-      text: 'A market that moves sharply up and down is volatile, but volatility alone says nothing about where prices will go next. Separating the size of movements from their causes — and from your own time horizon — makes market news easier to read calmly.',
+      text: 'A market that moves sharply up and down is volatile, but volatility alone says nothing about where prices will go next. Separating the size of a move from its causes, and from your own time horizon, makes market news far easier to read calmly.',
     },
     tools: [],
-    note: 'NVeston does not provide personalized investment recommendations, portfolio management or trading signals. For personal investment advice, consult an appropriately registered professional.',
+    note: 'NVeston’s market intelligence is research and analysis, not personalized investment advice. See Important Disclosures for details.',
     topic: 'analysis',
   },
 };

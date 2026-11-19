@@ -107,7 +107,7 @@ const RAW_ROUTES = [
           params: {},
           title: 'NVeston Intelligence | Insights & Analysis',
           description:
-            'Clear, practical analysis of business finance, the economy, financial markets and risk — written to help you understand what matters and why.',
+            'Clear, practical analysis of business finance, the economy, financial markets and risk, written to help you understand what matters and why.',
           section: 'insights',
           breadcrumbs: crumbs(INSIGHTS_CRUMB),
         },
@@ -142,7 +142,7 @@ const RAW_ROUTES = [
     page: 'about',
     title: 'About NVeston | Financial Intelligence & Strategic Advisory',
     description:
-      'Learn what NVeston is, how it works, the principles behind its analysis, and how the company intends to grow — stated plainly and without overstatement.',
+      'NVeston is a financial intelligence and strategic advisory firm. Learn how we work, the principles behind our analysis and where the company is headed.',
     section: 'about',
     schemaType: 'AboutPage',
     breadcrumbs: crumbs({ name: 'About NVeston', path: '/about' }),

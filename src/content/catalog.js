@@ -26,7 +26,7 @@ export const SERVICES = [
   {
     slug: 'risk-scenario-analysis',
     name: 'Risk & Scenario Analysis',
-    short: 'Test how changes in sales, costs or borrowing could affect you — before they happen — and prepare a response.',
+    short: 'See how changes in sales, costs or borrowing would affect you, and prepare your response before they happen.',
     icon: 'shield',
     topic: 'analysis',
   },
@@ -69,7 +69,7 @@ export const SEGMENTS = [
     slug: 'market-participants',
     name: 'Market Participants',
     navName: 'Market Participants',
-    short: 'Context on markets, the economy and risk for people who want to understand, not chase, headlines.',
+    short: 'Context on markets, the economy and risk for people who want to understand the forces behind the headlines.',
   },
 ];
 
@@ -89,7 +89,7 @@ export const TOOLS = [
   {
     slug: 'break-even',
     name: 'Break-Even Analyzer',
-    short: 'Find how much you need to sell to cover your costs — and to reach a profit target.',
+    short: 'Find how much you need to sell to cover your costs and reach a profit target.',
     icon: 'target',
   },
   {

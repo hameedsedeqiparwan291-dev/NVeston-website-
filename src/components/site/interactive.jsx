@@ -196,7 +196,7 @@ export function ScenarioFan() {
           </g>
         ))}
       </svg>
-      <figcaption className="mt-2 text-xs text-muted-foreground">Illustrative. Analysis does not predict which path occurs — it prepares you for the range.</figcaption>
+      <figcaption className="mt-2 text-xs text-muted-foreground">Illustrative. Analysis prepares you for the full range of paths.</figcaption>
     </figure>
   );
 }

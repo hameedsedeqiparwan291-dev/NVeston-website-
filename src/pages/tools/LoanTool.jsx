@@ -58,7 +58,7 @@ export default function LoanTool({ route }) {
         </p>
         {rB && (
           <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">
-            Option B costs {formatCurrency(rB.totalInterest)} in interest — {formatSignedCurrency(rB.totalInterest - rA.totalInterest)} compared with Option A, with payments of {formatCurrency(rB.payment, { cents: true })} {FREQ_LABEL[freqB]}.
+            Option B costs {formatCurrency(rB.totalInterest)} in interest, a difference of {formatSignedCurrency(rB.totalInterest - rA.totalInterest)} compared with Option A, with payments of {formatCurrency(rB.payment, { cents: true })} {FREQ_LABEL[freqB]}.
           </p>
         )}
       </div>
@@ -100,7 +100,7 @@ export default function LoanTool({ route }) {
       </dl>
 
       <div className="rounded-sm border border-border bg-card p-6">
-        <h3 className="mb-6 text-sm font-medium uppercase tracking-[0.14em] text-muted-foreground">Option A — principal and interest paid each year</h3>
+        <h3 className="mb-6 text-sm font-medium uppercase tracking-[0.14em] text-muted-foreground">Option A: principal and interest paid each year</h3>
         <StackedColumns
           data={rA.years.map((y) => ({ label: `Y${y.year}`, principal: y.principal, interest: y.interest }))}
           keys={[{ key: 'principal', label: 'Principal repaid', tone: 'secondary' }, { key: 'interest', label: 'Interest paid', tone: 'primary' }]}
@@ -133,7 +133,7 @@ export default function LoanTool({ route }) {
         'Excludes fees, insurance, taxes, balloon payments and prepayment penalties, which can add materially to the cost.',
         'Lenders may quote rates differently (for example APR) or compound interest daily; actual payments will differ.',
         'Variable-rate loans change over time and are not modelled.',
-        'These are estimates for comparison only — not an offer, quote or approval from any lender.',
+        'These are estimates for comparison. They are not an offer, quote or approval from any lender.',
       ]}
     />
   );

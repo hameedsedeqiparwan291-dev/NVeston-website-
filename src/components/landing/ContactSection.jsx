@@ -57,7 +57,7 @@ const GENERAL_SUCCESS = 'Thank you. Your inquiry has been sent successfully.';
 const CONSULTATION_SUCCESS =
   'Thank you for contacting NVeston. Your consultation request has been received. We will review your preferred timing and follow up by email to coordinate your 15-minute introductory conversation.';
 const SUBMIT_ERROR =
-  'We were unable to send your message. Your information has been kept — please try again, or email contact@nveston.com directly.';
+  'We were unable to send your message. Your information has been kept. Please try again, or email contact@nveston.com directly.';
 
 const EMPTY_FORM = {
   name: '',
@@ -216,11 +216,11 @@ export default function ContactSection() {
     const commonIds = new Set(COMMON_TIME_ZONES.map(([id]) => id));
     const common = COMMON_TIME_ZONES.map(([id, label]) => {
       const offset = utcOffset(id);
-      return [id, offset ? `${label} — ${offset}` : label];
+      return [id, offset ? `${label} (${offset})` : label];
     });
     if (detectedZone && !commonIds.has(detectedZone)) {
       const offset = utcOffset(detectedZone);
-      common.unshift([detectedZone, `${detectedZone}${offset ? ` — ${offset}` : ''}`]);
+      common.unshift([detectedZone, `${detectedZone}${offset ? ` (${offset})` : ''}`]);
     }
     const others = allTimeZones().filter((id) => !commonIds.has(id) && id !== detectedZone);
     return { common, others };
@@ -596,7 +596,7 @@ export default function ContactSection() {
                         ) : (
                           <p id="contact-timeZone-hint" className="font-inter text-xs text-muted-foreground/80 mt-2">
                             {form.timeZone && form.timeZone === detectedZone
-                              ? 'Detected from your device — change it if needed.'
+                              ? 'Detected from your device. Change it if needed.'
                               : 'Your preferred time will be recorded in this time zone.'}
                           </p>
                         )}

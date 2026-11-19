@@ -33,7 +33,7 @@ const WIDGET_CONFIG = {
     launcherLabel:  'Ask HAMI',
     statusLabel:    'Available',
     welcomeTitle:   "Hello, I'm HAMI",
-    welcomeBody:    "NVeston's AI intelligence assistant. Ask me about our services, investment philosophy, or how NVeston can help you.",
+    welcomeBody:    "NVeston's AI assistant. Ask me about our services, our analytical approach, or how to request a consultation.",
   },
 
   // ── Theme ──────────────────────────────────────────────────────────────────
@@ -71,10 +71,10 @@ const WIDGET_CONFIG = {
   // ── Suggested Questions ────────────────────────────────────────────────────
   suggestedQuestions: [
     'What services does NVeston offer?',
-    'How does NVeston approach investment analysis?',
+    'How does NVeston approach financial analysis?',
     'What is the NEX Triangle framework?',
-    'How can NVeston help with my portfolio?',
-    'Tell me about your investment philosophy',
+    'Which tools can help me understand my cash flow?',
+    'What does NVeston not do?',
     'How do I request a consultation?',
   ],
 

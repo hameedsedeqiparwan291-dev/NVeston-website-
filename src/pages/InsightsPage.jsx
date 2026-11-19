@@ -40,7 +40,7 @@ export default function InsightsPage({ route }) {
         route={route}
         eyebrow="NVeston Intelligence"
         title={category ? category.name : 'Insights that make finance easier to understand.'}
-        lead={category ? category.short : 'Practical, carefully reasoned analysis of business finance, the economy, financial markets and risk — written for decision-makers, not specialists.'}
+        lead={category ? category.short : 'Practical, carefully reasoned analysis of business finance, the economy, financial markets and risk, written for decision-makers rather than specialists.'}
       />
       <Section tone="light" pad="md">
         <Container>

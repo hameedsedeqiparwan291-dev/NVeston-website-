@@ -23,7 +23,7 @@ export default function ConsultationCard({ config }) {
       <a
         href={consultation.buttonHref}
         className="hami-consult-btn"
-        aria-label={`${consultation.buttonLabel} — opens NVeston contact page`}
+        aria-label={`${consultation.buttonLabel}: opens the NVeston contact page`}
       >
         {consultation.buttonLabel}
         <ArrowRight size={13} strokeWidth={2} aria-hidden="true" />

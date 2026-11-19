@@ -13,13 +13,13 @@ import { ContactFormMount } from '../components/site/ClientOnly.jsx';
 const SCENARIOS = [
   {
     title: 'Profitable, but short of cash',
-    text: 'Customers pay 60 days after the work is done, but staff and suppliers are paid this month. As sales grow, the business funds more work before the money arrives — and the bank balance can fall even as profit rises.',
+    text: 'Customers pay 60 days after the work is done, but staff and suppliers are paid this month. As sales grow, the business funds more work before the money arrives, and the bank balance can fall even as profit rises.',
     href: '/tools/cash-flow',
     cta: 'Explore the Cash Flow Simulator',
   },
   {
     title: 'A second location',
-    text: 'Before committing, an owner needs to weigh start-up costs, financing payments, expected revenue and operating costs — and to know what happens if the new site takes a year longer to reach break-even.',
+    text: 'Before committing, an owner needs to weigh start-up costs, financing payments, expected revenue and operating costs, and to know what happens if the new site takes a year longer to reach break-even.',
     href: '/services/entrepreneur-business-advisory',
     cta: 'Entrepreneur & Business Advisory',
   },
@@ -32,7 +32,7 @@ const SCENARIOS = [
 ];
 
 const PRINCIPLES = [
-  { title: 'Disciplined Analysis', text: 'Conclusions follow from structured work and evidence — not from momentum, headlines or preference.' },
+  { title: 'Disciplined Analysis', text: 'Conclusions follow from structured work and evidence, never from momentum, headlines or preference.' },
   { title: 'Structural Insight', text: 'We look beneath the surface for the forces that actually drive an outcome: costs, timing, rates, concentration.' },
   { title: 'Adaptive Frameworks', text: 'Plans built for a range of outcomes, with assumptions written down so they can be revisited as conditions change.' },
 ];
@@ -51,7 +51,7 @@ export default function HomePage() {
               Better decisions start with a <span className="italic text-primary">clearer picture.</span>
             </h1>
             <p className="mt-7 max-w-xl text-lg font-light leading-relaxed text-muted-foreground md:text-xl">
-              NVeston helps individuals, business owners and entrepreneurs understand their finances, test their options and act with confidence — through disciplined analysis, explained in plain language.
+              NVeston helps individuals, business owners and entrepreneurs understand their finances, test their options and act with confidence, backed by disciplined analysis explained in plain language.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <ButtonLink href="#how-we-help">Find how NVeston can help</ButtonLink>
@@ -105,7 +105,7 @@ export default function HomePage() {
                 id="services-heading"
                 eyebrow="Our services"
                 title="Six disciplines. One purpose: clearer decisions."
-                lead="Each service applies the same analytical discipline to a different kind of question — from household budgets to complex strategic choices."
+                lead="Each service applies the same analytical discipline to a different kind of question, from household budgets to complex strategic choices."
               />
               <ButtonLink href="/services" variant="secondary" className="mt-8">All services</ButtonLink>
             </div>
@@ -133,7 +133,7 @@ export default function HomePage() {
                 lead="A business with $50,000 in monthly revenue and $45,000 in expenses earns $5,000 a month. Move the slider to see what a modest reduction in expenses would mean over a year."
               />
               <p className="mt-6 text-sm font-light leading-relaxed text-muted-foreground" data-reveal>
-                The real work is finding which costs can change without hurting revenue — and whether the change would last. That is where careful analysis earns its keep.
+                The real work is finding which costs can change without hurting revenue, and whether the change will last. That is where careful analysis earns its keep.
               </p>
             </div>
             <div className="lg:col-span-7" data-reveal>
@@ -242,7 +242,7 @@ export default function HomePage() {
                 id="philosophy-heading"
                 eyebrow="Our philosophy"
                 title={<>Capital deserves <span className="italic text-primary">direction.</span></>}
-                lead="Every decision about money — a household budget, a price change, an expansion — is better made with a clear view of the facts, an honest view of the risks and a plan for more than one outcome."
+                lead="Every decision about money, whether a household budget, a price change or an expansion, is better made with a clear view of the facts, an honest view of the risks and a plan for more than one outcome."
               />
               <div className="mt-10 space-y-7">
                 {PRINCIPLES.map((p) => (

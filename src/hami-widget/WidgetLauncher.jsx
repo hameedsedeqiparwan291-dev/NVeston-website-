@@ -41,7 +41,7 @@ export default function WidgetLauncher({
         onClick={onToggle}
         aria-label={isOpen
           ? 'Close HAMI'
-          : `${config.assistant.launcherLabel} — NVeston AI Assistant`
+          : `${config.assistant.launcherLabel}, NVeston AI Assistant`
         }
         aria-expanded={isOpen}
         aria-haspopup="dialog"

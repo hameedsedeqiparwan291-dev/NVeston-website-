@@ -35,7 +35,7 @@ export default function ProfitabilityTool({ route }) {
         <p className="font-display text-xl leading-snug md:text-2xl">
           {r.monthlyChange === 0
             ? `Monthly profit stays at ${formatCurrency(r.current.profit)} under these assumptions.`
-            : `Monthly profit would ${r.monthlyChange > 0 ? 'rise' : 'fall'} from ${formatCurrency(r.current.profit)} to ${formatCurrency(r.scenario.profit)} — about ${formatCurrency(Math.abs(r.annualChange))} ${r.annualChange > 0 ? 'more' : 'less'} per year.`}
+            : `Monthly profit would ${r.monthlyChange > 0 ? 'rise' : 'fall'} from ${formatCurrency(r.current.profit)} to ${formatCurrency(r.scenario.profit)}, about ${formatCurrency(Math.abs(r.annualChange))} ${r.annualChange > 0 ? 'more' : 'less'} per year.`}
         </p>
       </div>
       <dl className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
@@ -48,12 +48,12 @@ export default function ProfitabilityTool({ route }) {
         <h3 className="mb-6 text-sm font-medium uppercase tracking-[0.14em] text-muted-foreground">Monthly comparison</h3>
         <BarComparison
           items={[
-            { label: 'Revenue — current', value: r.current.revenue, tone: 'muted' },
-            { label: 'Revenue — scenario', value: r.scenario.revenue, tone: 'secondary' },
-            { label: 'Expenses — current', value: r.current.expenses, tone: 'muted' },
-            { label: 'Expenses — scenario', value: r.scenario.expenses, tone: 'secondary' },
-            { label: 'Profit — current', value: r.current.profit, tone: 'muted' },
-            { label: 'Profit — scenario', value: r.scenario.profit, tone: 'primary' },
+            { label: 'Revenue (current)', value: r.current.revenue, tone: 'muted' },
+            { label: 'Revenue (scenario)', value: r.scenario.revenue, tone: 'secondary' },
+            { label: 'Expenses (current)', value: r.current.expenses, tone: 'muted' },
+            { label: 'Expenses (scenario)', value: r.scenario.expenses, tone: 'secondary' },
+            { label: 'Profit (current)', value: r.current.profit, tone: 'muted' },
+            { label: 'Profit (scenario)', value: r.scenario.profit, tone: 'primary' },
           ]}
           format={(v) => formatCurrency(v)}
           summary={`Current: revenue ${formatCurrency(r.current.revenue)}, expenses ${formatCurrency(r.current.expenses)}, profit ${formatCurrency(r.current.profit)}. Scenario: revenue ${formatCurrency(r.scenario.revenue)}, expenses ${formatCurrency(r.scenario.expenses)}, profit ${formatCurrency(r.scenario.profit)}.`}
@@ -70,7 +70,7 @@ export default function ProfitabilityTool({ route }) {
     <ToolLayout
       route={route}
       slug="business-profitability"
-      lead="See your simplified profit and margin today, then test how a change in revenue or expenses would affect them — monthly and over a year."
+      lead="See your simplified profit and margin today, then test how a change in revenue or expenses would affect them, both monthly and over a year."
       inputs={inputs}
       results={results}
       related={['break-even', 'cash-flow']}

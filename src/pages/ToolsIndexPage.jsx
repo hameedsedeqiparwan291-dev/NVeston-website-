@@ -18,7 +18,7 @@ export default function ToolsIndexPage({ route }) {
         route={route}
         eyebrow="Tools & Resources"
         title="Explore your numbers, privately."
-        lead="Practical calculators that make financial concepts tangible. Each explains its assumptions and limits, and every calculation runs in your browser — nothing is stored or sent."
+        lead="Practical calculators that make financial concepts tangible. Each explains its assumptions and limits, and every calculation runs privately in your browser."
       />
       <Section tone="light" pad="lg">
         <Container>

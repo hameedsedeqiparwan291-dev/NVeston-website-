@@ -9,7 +9,7 @@ const PRINCIPLES = [
   { title: 'Evidence over assertion', text: 'Conclusions should follow from data and reasoning that can be examined. We show our assumptions and cite our sources.' },
   { title: 'Honesty about uncertainty', text: 'We are clear about what is known, what is assumed and what remains uncertain. We prepare for a range of outcomes rather than promising one.' },
   { title: 'Accountability', text: 'We take responsibility for how every conclusion is reasoned and communicated, and for staying within the boundaries of what we do.' },
-  { title: 'Your decision, your control', text: 'We provide analysis and perspective. Decisions — and the information you share — remain yours.' },
+  { title: 'Your decision, your control', text: 'We provide analysis and perspective. Your decisions, and the information you share with us, remain yours.' },
   { title: 'Long-term perspective', text: 'Sound financial decisions are rarely about the next month alone. We consider durability, resilience and the years ahead.' },
 ];
 
@@ -20,7 +20,7 @@ export default function AboutPage({ route }) {
         route={route}
         eyebrow="About NVeston"
         title="A financial intelligence firm built on disciplined analysis."
-        lead="NVeston exists to help people and businesses understand their finances clearly enough to make better decisions — with analysis that is rigorous, honest about uncertainty and explained in plain language."
+        lead="NVeston exists to help people and businesses understand their finances clearly enough to make better decisions, with analysis that is rigorous, honest about uncertainty and explained in plain language."
       >
         <ButtonLink href="/services">Explore our services</ButtonLink>
         <ButtonLink href="/founder" variant="secondary">Founder &amp; Leadership</ButtonLink>
@@ -36,7 +36,7 @@ export default function AboutPage({ route }) {
             <div className="space-y-5 text-[1.05rem] font-light leading-relaxed text-foreground/85 lg:col-span-7" data-reveal>
               <p>NVeston LLC is a Massachusetts-based financial intelligence and strategic advisory firm, operating on a remote-first basis within the United States. It was founded and is led by {FOUNDER.name}, Founder &amp; Managing Member.</p>
               <p>Our work is analysis and decision support. We help individuals understand their income, spending, debt and resilience; help business owners understand profit, cash flow, pricing and growth; translate economic and market developments into practical implications; and bring structure to complex strategic decisions.</p>
-              <p>We are a young firm, and we say so plainly. What we offer is not scale but focus: careful, personal analytical work, with the discipline and clarity we would expect of a much larger institution.</p>
+              <p>NVeston is a young firm with a clear focus: careful, personal analytical work delivered with the discipline and clarity of an established institution.</p>
             </div>
           </div>
         </Container>
@@ -52,7 +52,7 @@ export default function AboutPage({ route }) {
             <div data-reveal>
               <span className="eyebrow mb-4">Philosophy</span>
               <p className="font-light leading-relaxed text-muted-foreground">
-                Capital — whether a household’s savings or a company’s cash — deserves direction. Our work rests on three ideas that have guided NVeston from the start: <strong className="font-medium text-foreground">disciplined analysis</strong>, grounded in evidence rather than emotion; <strong className="font-medium text-foreground">structural insight</strong>, looking beneath the surface for what actually drives an outcome; and <strong className="font-medium text-foreground">adaptive frameworks</strong>, built for a range of possible futures rather than a single forecast.
+                Capital deserves direction, whether it is a household’s savings or a company’s cash. Our work rests on three ideas that have guided NVeston from the start: <strong className="font-medium text-foreground">disciplined analysis</strong>, grounded in evidence rather than emotion; <strong className="font-medium text-foreground">structural insight</strong>, looking beneath the surface for what actually drives an outcome; and <strong className="font-medium text-foreground">adaptive frameworks</strong>, built for a range of possible futures rather than a single forecast.
               </p>
             </div>
           </div>
@@ -85,8 +85,8 @@ export default function AboutPage({ route }) {
           <div className="grid gap-14 lg:grid-cols-12">
             <div className="lg:col-span-6">
               <span className="eyebrow mb-4">Today and tomorrow</span>
-              <h2 className="font-display text-3xl font-medium leading-tight">What we do now — and where we intend to go.</h2>
-              <p className="mt-5 font-light leading-relaxed text-muted-foreground">We believe in being precise about the difference between current capabilities and future ambitions.</p>
+              <h2 className="font-display text-3xl font-medium leading-tight">What we do today, and where we are headed.</h2>
+              <p className="mt-5 font-light leading-relaxed text-muted-foreground">We are precise about the difference between what we offer today and what we are building toward.</p>
             </div>
             <div className="grid gap-8 sm:grid-cols-2 lg:col-span-6">
               <div>
@@ -122,9 +122,9 @@ export default function AboutPage({ route }) {
               </ul>
             </div>
             <div>
-              <h2 className="font-display text-2xl font-medium">Clear boundaries</h2>
+              <h2 className="font-display text-2xl font-medium">Regulatory transparency</h2>
               <p className="mt-5 text-sm font-light leading-relaxed text-muted-foreground">
-                NVeston LLC is registered as a Massachusetts limited liability company. It is not a registered investment adviser, broker-dealer, bank or asset manager, and it does not provide personalized investment, legal or tax advice.
+                NVeston LLC is a Massachusetts limited liability company. Our Important Disclosures explain its regulatory status and the scope of our services in full.
               </p>
               <TextLink href="/policies/disclosures" className="mt-4">Read our Important Disclosures</TextLink>
             </div>

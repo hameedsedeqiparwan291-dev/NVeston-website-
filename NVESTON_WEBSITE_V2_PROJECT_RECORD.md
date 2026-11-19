@@ -258,3 +258,28 @@ To complete the remaining two: supply (a) a HAMI character as a transparent anim
 2. Privacy Policy, Terms of Use and Important Disclosures are unapproved drafts and are included in the production build. Instruction: do not publish unapproved legal drafts.
 3. Vercel Build Command cannot be verified from here (no dashboard access); options: founder confirms `npm run build` in Project Settings, or authorize a `vercel.json` (`buildCommand: npm run build`, `outputDirectory: dist`).
 4. For counsel (non-blocking unless counsel says otherwise): "Financial Markets & Portfolio Intelligence" service name; "advisory" terminology.
+
+---
+
+## 14. Communication standards (adopted 2026-11-18)
+
+### NVeston Capability-First Communication Standard
+- Lead with capabilities, expertise and customer value; communicate with institutional confidence.
+- Define NVeston by what it does. Education is one component of its financial intelligence, analytical and strategic decision-support work.
+- Centralize comprehensive limitations and regulatory explanations in Important Disclosures, Terms of Use, the FAQ and the footer statement.
+- Keep concise, prominent, context-specific disclosures where they prevent misunderstanding: Financial Markets & Portfolio Intelligence, the market-participants segment, interactive tools, hypothetical examples and HAMI. Prefer one sentence plus a link to Important Disclosures.
+- Never remove a material disclosure because it sounds restrictive. Never hide or obscure disclaimers.
+- Never exaggerate capabilities, credentials, size, regulatory status or expected outcomes.
+
+### Natural Human Writing Standard
+- No em dashes (U+2014) in original website copy; restructure sentences rather than substituting double hyphens or en dashes.
+- Professional American English. Every sentence has a purpose.
+- Avoid repetitive structures, unnecessary adjectives, exaggerated claims, robotic transitions, formulaic introductions, excessive rhetorical contrasts ("not X, but Y"), buzzwords, repeated slogans, needless jargon and over-explanation.
+- Exceptions: mathematical expressions, technical output, official names, verbatim quotations and protected approved text (flag conflicts instead of rewriting).
+
+### Language refinement status (checkpoint tag `v2-pre-language`)
+- Rewritten: all six service pages, segments, needs selector, catalog descriptions, FAQ, homepage/About/Contact/Insights/Tools copy, tool labels, metadata descriptions, chart captions, HAMI welcome text, subtitle, suggested questions and error messages.
+- Remaining em dashes (deliberate): "United States — Remote First" (approved v1 location line, rendered in footer and contact form; flagged for founder decision); consultation email subject and body formatting (internal email format specified by the founder); "—" placeholder for values that cannot be calculated in tools (technical output).
+- Legal policies amended per founder instructions. **Review status: internal executive review completed by the Founder & Managing Member; independent legal counsel review not yet performed.** `EFFECTIVE_DATE` in `src/content/legal.js` must be set to the actual publication date at release (`npm run qa` flags it until then).
+- HAMI verification: frontend data flows verified (messages, session history, session ID, error reports with first 500 characters, health checks, two session-storage flags). **Not verifiable from this repository:** HAMI backend system instructions and safeguards against personalized investment recommendations, third-party AI provider(s), message retention and logging. `HAMI Project.docx` is password-encrypted. The Privacy Policy states these practices in non-guaranteeing terms pending confirmation.
+- `vercel.json` added (approved technical exception): `buildCommand: npm run build`, `outputDirectory: dist`.
