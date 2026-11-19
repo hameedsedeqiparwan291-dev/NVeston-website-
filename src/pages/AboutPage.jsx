@@ -36,7 +36,7 @@ export default function AboutPage({ route }) {
             <div className="space-y-5 text-[1.05rem] font-light leading-relaxed text-foreground/85 lg:col-span-7" data-reveal>
               <p>NVeston LLC is a Massachusetts-based financial intelligence and strategic advisory firm, operating on a remote-first basis within the United States. It was founded and is led by {FOUNDER.name}, Founder &amp; Managing Member.</p>
               <p>Our work is analysis and decision support. We help individuals understand their income, spending, debt and resilience; help business owners understand profit, cash flow, pricing and growth; translate economic and market developments into practical implications; and bring structure to complex strategic decisions.</p>
-              <p>NVeston is a young firm with a clear focus: careful, personal analytical work delivered with the discipline and clarity of an established institution.</p>
+              <p>NVeston brings together financial intelligence, disciplined analysis, and strategic perspective to help individuals and businesses make better-informed decisions in an increasingly complex world.</p>
             </div>
           </div>
         </Container>

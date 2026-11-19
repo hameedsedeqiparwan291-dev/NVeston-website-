@@ -9,7 +9,7 @@ export const ORG = {
   legalName: 'NVeston LLC',
   descriptor: 'Financial intelligence and strategic advisory',
   email: 'contact@nveston.com',
-  location: 'United States — Remote First',
+  location: 'United States · Remote First',
   registration:
     'NVeston LLC is registered as a Massachusetts limited liability company. This is a corporate registration only; it is not registration as an investment adviser, broker-dealer, or other regulated financial services provider.',
   logo: '/brand/nveston-logo-192.png',

@@ -74,7 +74,7 @@ const WIDGET_CONFIG = {
     'How does NVeston approach financial analysis?',
     'What is the NEX Triangle framework?',
     'Which tools can help me understand my cash flow?',
-    'What does NVeston not do?',
+    'Who does NVeston work with?',
     'How do I request a consultation?',
   ],
 

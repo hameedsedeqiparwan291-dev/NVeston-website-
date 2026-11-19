@@ -418,7 +418,7 @@ export default function ContactSection() {
                     Location
                   </p>
                   <p className="font-inter text-sm text-foreground">
-                    United States — Remote First
+                    United States · Remote First
                   </p>
                 </div>
               </div>
