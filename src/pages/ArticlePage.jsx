@@ -59,7 +59,7 @@ export default function ArticlePage({ route }) {
           <article className="prose-nv">
             {body.map((b, i) => <Block key={i} b={b} />)}
           </article>
-          <Notice className="mt-12" title="General education">
+          <Notice className="mt-12" title="General information">
             This article is general information, not personalized financial, investment, tax or legal advice. Examples are hypothetical and simplified. See our <a className="text-primary underline underline-offset-4" href="/policies/disclosures">Important Disclosures</a>.
           </Notice>
           <div className="mt-10 flex flex-wrap items-center gap-4 text-sm">

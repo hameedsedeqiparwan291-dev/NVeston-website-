@@ -39,7 +39,7 @@ export default function ResilienceTool({ route }) {
 
   const results = !r || !submitted ? (
     <div className="rounded-sm border border-dashed border-border bg-card p-8">
-      <h2 className="font-display text-2xl">An educational check, not a score.</h2>
+      <h2 className="font-display text-2xl">A structured check, not a score.</h2>
       <p className="mt-4 max-w-xl font-light leading-relaxed text-muted-foreground">
         Answer six short questions. You will see plain-language observations about your reserves, debt, monthly breathing room, income stability and spending flexibility, with an explanation of why each matters.
       </p>
@@ -67,7 +67,7 @@ export default function ResilienceTool({ route }) {
         ))}
       </ul>
       <Notice title="About these observations">
-        Labels use NVeston’s educational reference bands (for example, three and six months of reserves). They are not an industry standard, a credit rating or a validated financial-health score, and they cannot reflect everything about your situation.
+        Labels use NVeston’s reference bands (for example, three and six months of reserves). They are not an industry standard, a credit rating or a validated financial-health score, and they cannot reflect everything about your situation.
       </Notice>
     </div>
   );
@@ -89,7 +89,7 @@ export default function ResilienceTool({ route }) {
         'Income stability and spending flexibility are taken directly from your answers.',
       ]}
       limitations={[
-        'Reference bands are educational rules of thumb chosen by NVeston, not official standards or lending criteria.',
+        'Reference bands are rules of thumb chosen by NVeston, not official standards or lending criteria.',
         'There is no overall score: resilience depends on how these factors combine for you.',
         'It does not consider insurance, family support, assets, upcoming costs or the interest rates on your debts.',
         'This is not a credit assessment, financial plan or recommendation.',

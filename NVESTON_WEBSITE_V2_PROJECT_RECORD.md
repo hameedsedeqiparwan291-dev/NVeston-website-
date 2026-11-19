@@ -265,11 +265,16 @@ To complete the remaining two: supply (a) a HAMI character as a transparent anim
 
 ### NVeston Capability-First Communication Standard
 - Lead with capabilities, expertise and customer value; communicate with institutional confidence.
-- Define NVeston by what it does. Education is one component of its financial intelligence, analytical and strategic decision-support work.
+- Define NVeston by what it does: a financial intelligence and strategic advisory firm providing analysis, research, strategic insight and decision support.
 - Centralize comprehensive limitations and regulatory explanations in Important Disclosures, Terms of Use, the FAQ and the footer statement.
 - Keep concise, prominent, context-specific disclosures where they prevent misunderstanding: Financial Markets & Portfolio Intelligence, the market-participants segment, interactive tools, hypothetical examples and HAMI. Prefer one sentence plus a link to Important Disclosures.
 - Never remove a material disclosure because it sounds restrictive. Never hide or obscure disclaimers.
 - Never exaggerate capabilities, credentials, size, regulatory status or expected outcomes.
+
+### Terminology Standard (adopted 2026-11-18)
+NVeston is a financial intelligence and strategic advisory firm, not an educational institution. Do not describe its identity, services, tools or capabilities as "education" or "educational". Preferred terms, applied in context rather than mechanically:
+financial education → financial intelligence; education and analysis → research and analysis; educational resources → analytical resources; educational tools → financial decision-support tools; educational content → informational and analytical content; educational purposes → informational and analytical purposes; market education → market intelligence; financial analysis and education → financial analysis and strategic insight; general information and education → general information and analysis; educational examples → illustrative examples.
+Preserve academic credentials (e.g., "finance education" in the approved founder metadata), official quotations and legally necessary terminology. Regulatory boundaries and material disclosures are unchanged by this standard.
 
 ### Natural Human Writing Standard
 - No em dashes (U+2014) in original website copy; restructure sentences rather than substituting double hyphens or en dashes.

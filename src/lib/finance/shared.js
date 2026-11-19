@@ -1,4 +1,4 @@
-// Shared helpers for NVeston's educational calculators.
+// Shared helpers for NVeston's financial decision-support tools.
 // All calculations run locally in the visitor's browser; nothing is transmitted.
 
 export const roundCents = (n) => Math.round((n + Number.EPSILON) * 100) / 100;

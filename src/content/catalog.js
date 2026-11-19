@@ -101,7 +101,7 @@ export const TOOLS = [
   {
     slug: 'financial-resilience',
     name: 'Financial Resilience Assessment',
-    short: 'An educational check of your reserves, debt and flexibility, with plain-language observations.',
+    short: 'A private check of your reserves, debt and flexibility, with plain-language observations.',
     icon: 'lifebuoy',
   },
 ];

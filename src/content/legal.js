@@ -20,7 +20,7 @@ export const LEGAL_DOCS = {
       {
         h: 'How NVeston supports decisions',
         p: [
-          'NVeston provides financial analysis, market and economic research, education and strategic decision support. Our role is to help clients understand their situation, evaluate their options and make well-informed decisions of their own.',
+          'NVeston provides financial analysis, market and economic research, and strategic decision support. Our role is to help clients understand their situation, evaluate their options and make well-informed decisions of their own.',
           'NVeston does not exercise discretionary authority over any client’s assets, accounts or affairs and does not make decisions on a client’s behalf. Clients retain full authority over their decisions and their implementation.',
         ],
       },

@@ -93,7 +93,7 @@ export default function AboutPage({ route }) {
                 <h3 className="mb-4 text-sm font-medium uppercase tracking-[0.14em] text-primary">Today</h3>
                 <BulletList items={[
                   'Six areas of analysis and decision support',
-                  'Free educational tools on this website',
+                  'Free financial decision-support tools on this website',
                   'HAMI, an AI assistant for general questions',
                   'Introductory consultations by request',
                 ]} />

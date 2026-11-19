@@ -1,6 +1,6 @@
 import { checkNumber } from './shared.js';
 
-// Educational reference bands used by NVeston to frame observations.
+// Reference bands used by NVeston to frame observations.
 // They are not an industry standard, credit score or validated financial-health rating.
 export const RESILIENCE_BANDS = {
   reserveMonths: { strong: 6, moderate: 3 },

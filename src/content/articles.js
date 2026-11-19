@@ -1,4 +1,4 @@
-// Article bodies (draft educational content, pending founder review).
+// Article bodies (draft informational and analytical content, pending founder review).
 // Block types: p, h2, ul, example { title, lines[] }, quote.
 // All figures are illustrative arithmetic; no external statistics are cited.
 
@@ -154,7 +154,7 @@ export const ARTICLE_BODIES = {
     { h2: 'Reading volatile markets calmly' },
     { p: 'History shows that markets have experienced many periods of sharp volatility, and that what followed has varied widely. That is precisely why historical patterns should be treated as context rather than prediction.' },
     { p: 'A calmer approach separates three questions: What has actually happened? Why does it appear to have happened? And does it change anything about my own situation and time horizon? The first two are matters of analysis. The third depends on personal circumstances. For decisions about specific investments, it is a question for an appropriately licensed professional.' },
-    { p: 'This article is general education. It is not a recommendation to buy, sell or hold any investment.' },
+    { p: 'This article provides general information and analysis. It is not a recommendation to buy, sell or hold any investment.' },
   ],
 };
 

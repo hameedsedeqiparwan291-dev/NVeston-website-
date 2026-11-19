@@ -76,7 +76,7 @@ export default function Footer() {
 
         <div className="mt-16 border-t border-border pt-8">
           <p className="max-w-4xl text-xs font-light leading-relaxed text-muted-foreground">
-            {ORG.registration} NVeston provides financial analysis, education and strategic decision support. Website content and tools are for general information and education; they are not personalized investment, legal, tax or accounting advice. Past results and hypothetical examples do not guarantee future outcomes.
+            {ORG.registration} NVeston provides financial analysis, strategic insight and decision support. Website content and tools are for general information and analysis; they are not personalized investment, legal, tax or accounting advice. Past results and hypothetical examples do not guarantee future outcomes.
           </p>
           <div className="mt-6 flex flex-col gap-4 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
             <p>© {year} {ORG.legalName}. All rights reserved.</p>
