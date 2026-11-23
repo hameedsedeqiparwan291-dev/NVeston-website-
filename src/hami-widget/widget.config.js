@@ -88,9 +88,9 @@ const WIDGET_CONFIG = {
 
   // ── Footer ─────────────────────────────────────────────────────────────────
   footer: {
-    disclaimer: 'Before making consequential financial or capital decisions, confirm material information directly with the NVeston team.',
-    termsLabel: 'Terms',
-    termsHref:  '/policies/terms',
+    disclaimer: "Conversations may be stored and analyzed by NVeston to understand visitor needs, improve HAMI's responses, and enhance our services. Please avoid sharing sensitive personal or financial information.",
+    termsLabel: 'Privacy Policy',
+    termsHref:  '/policies/privacy',
   },
 };
 
