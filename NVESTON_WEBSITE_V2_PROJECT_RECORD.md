@@ -288,3 +288,24 @@ Preserve academic credentials (e.g., "finance education" in the approved founder
 - Legal policies amended per founder instructions. **Review status: internal executive review completed by the Founder & Managing Member; independent legal counsel review not yet performed.** `EFFECTIVE_DATE` in `src/content/legal.js` must be set to the actual publication date at release (`npm run qa` flags it until then).
 - HAMI verification: frontend data flows verified (messages, session history, session ID, error reports with first 500 characters, health checks, two session-storage flags). **Not verifiable from this repository:** HAMI backend system instructions and safeguards against personalized investment recommendations, third-party AI provider(s), message retention and logging. `HAMI Project.docx` is password-encrypted. The Privacy Policy states these practices in non-guaranteeing terms pending confirmation.
 - `vercel.json` added (approved technical exception): `buildCommand: npm run build`, `outputDirectory: dist`.
+
+## 15. Release runbook: Website 2.0 (prepared 2026-11-24)
+
+Each step needs the founder's explicit authorization. Order matters.
+
+**1. HAMI backend first.** Deploy backend commits `0b0cc09` (NEX Triangle confidentiality) and `d94194f` by pushing `security/founder-analytics-lockdown` to the HAMI repository `main`; Railway deploys automatically. Take a volume snapshot first, as for `514a068`. After deployment, check that "What is the NEX Triangle?" returns only the approved sentence and that knowledge search still returns 401 without credentials.
+
+**2. Release commit.** On `development/nveston-website-v2`, set `EFFECTIVE_DATE` in `src/content/legal.js` to the publication date (YYYY-MM-DD). Then run `npm test`, `npm run build` and `npm run qa`; QA must report 0 problems.
+
+**3. Publish.** Fast-forward `main` to the release commit and push (`git push origin development/nveston-website-v2:main`). Vercel builds with `npm run build` and serves `dist`. `VITE_HAMI_API_URL` is already set in Vercel; v1 uses the same variable. Do not set `VITE_SHOW_DRAFTS` in production.
+
+**4. Verify live (minimal).**
+- Home page, one service page, one tool, the founder page and the three policy pages load, and the policies show the effective date.
+- `nveston.com` redirects to `www`.
+- The HAMI widget opens with five suggested questions and the privacy notice, and answers "Who does NVeston work with?"
+- The contact form still submits.
+
+**5. Rollback.**
+- Fastest: Vercel dashboard, then Deployments, then Instant Rollback to the previous production deployment (v1, commit `8c293dd`).
+- Source of record: tag `v1-baseline-2026-11-17` (= `8c293dd`). Restoring v1 in git is a revert or redeploy of that commit; never force-push over history.
+- The HAMI backend is independent of the website. A website rollback leaves the secured backend in place. v1's widget still offers the NEX Triangle question, but after step 1 it receives only the approved sentence.
