@@ -3,7 +3,7 @@
 // (2026-11-18). Not yet reviewed by independent legal counsel.
 // EFFECTIVE_DATE must be set to the actual publication date (YYYY-MM-DD) at release.
 
-export const EFFECTIVE_DATE = null;
+export const EFFECTIVE_DATE = '2026-11-24';
 
 export const LEGAL_DOCS = {
   disclosures: {
