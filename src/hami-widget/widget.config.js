@@ -62,7 +62,7 @@ const WIDGET_CONFIG = {
 
   // ── API ────────────────────────────────────────────────────────────────────
   // Points to the Railway backend via VITE_HAMI_API_URL environment variable.
-  // The backend uses cors() with no origin restriction, so direct calls work.
+  // The backend accepts requests only from the nveston.com origins (CORS).
   api: {
     baseUrl:      `${RAILWAY_URL}/api/nveston`,
     chatEndpoint: `${RAILWAY_URL}/api/nveston/chat`,
@@ -72,7 +72,6 @@ const WIDGET_CONFIG = {
   suggestedQuestions: [
     'What services does NVeston offer?',
     'How does NVeston approach financial analysis?',
-    'What is the NEX Triangle framework?',
     'Which tools can help me understand my cash flow?',
     'Who does NVeston work with?',
     'How do I request a consultation?',
