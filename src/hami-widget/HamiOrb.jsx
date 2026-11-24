@@ -1,52 +1,61 @@
 // =============================================================================
-// HAMI Widget — Intelligence Orb (visual identity)
+// HAMI Widget — visual identity (approved symbol)
 // =============================================================================
 //
-// An illuminated gold core with two orbital paths and satellite nodes, on navy.
-// Static by default; `active` adds a gentle orbit-and-pulse while HAMI is
-// processing. Motion is disabled under prefers-reduced-motion (see widget.css).
+// Four-point gold star with a hidden H, an asymmetric orbital ring that passes
+// behind the star, and a small orbital sphere. Same artwork as
+// public/brand/hami-symbol.svg. Static: no glow or animation. Shown on the
+// navy avatar backgrounds defined in widget.css.
 
 import React, { useId } from 'react';
 
+const STAR =
+  'M771 145 C763 300 742 400 692 429 C650 451 535 457 432 460 C535 463 650 469 692 491 C742 520 763 640 771 790 ' +
+  'C779 640 800 520 850 491 C892 469 1007 463 1110 460 C1007 457 892 451 850 429 C800 400 779 300 771 145 Z ' +
+  'M771 262 C769 345 752 415 718 446 L824 446 C790 415 773 345 771 262 Z ' +
+  'M718 476 L824 476 C793 510 774 580 771 655 C768 580 749 510 718 476 Z';
+
+const RING =
+  'M402 468 a381 110 0 1 0 762 0 a381 110 0 1 0 -762 0 Z M431 468 a352 100 0 1 0 704 0 a352 100 0 1 0 -704 0 Z';
+
+// Optical sizing: at small sizes (button, header, message labels) the ring and
+// sphere are drawn slightly heavier so they stay visible; same geometry.
+const RING_SMALL =
+  'M402 468 a381 110 0 1 0 762 0 a381 110 0 1 0 -762 0 Z M443 468 a340 92 0 1 0 680 0 a340 92 0 1 0 -680 0 Z';
+
 export default function HamiOrb({ size = 32, active = false, className = '' }) {
   const uid = useId().replace(/:/g, '');
-  const core = `hami-orb-core-${uid}`;
-  const glow = `hami-orb-glow-${uid}`;
+  const gold = `hami-mark-gold-${uid}`;
+  const mask = `hami-mark-mask-${uid}`;
+  const small = size <= 40;
   return (
     <svg
       width={size}
       height={size}
-      viewBox="0 0 40 40"
+      viewBox="415 100 740 740"
       className={`hami-orb${active ? ' hami-orb--active' : ''} ${className}`}
       aria-hidden="true"
       focusable="false"
     >
       <defs>
-        <radialGradient id={core} cx="40%" cy="36%" r="70%">
-          <stop offset="0" stopColor="#FFF6DC" />
-          <stop offset="0.45" stopColor="#E6C46A" />
-          <stop offset="1" stopColor="#9A6F22" />
-        </radialGradient>
-        <radialGradient id={glow} cx="50%" cy="50%" r="50%">
-          <stop offset="0" stopColor="#D4A843" stopOpacity="0.55" />
-          <stop offset="1" stopColor="#D4A843" stopOpacity="0" />
-        </radialGradient>
+        <linearGradient id={gold} x1="470" y1="150" x2="1100" y2="780" gradientUnits="userSpaceOnUse">
+          <stop offset="0" stopColor="#F7D47E" />
+          <stop offset="0.5" stopColor="#E2AE45" />
+          <stop offset="1" stopColor="#C38A2B" />
+        </linearGradient>
+        <mask id={mask} maskUnits="userSpaceOnUse" x="0" y="-400" width="1600" height="1600">
+          <rect x="0" y="-400" width="1600" height="1600" fill="#fff" />
+          <path d="M783 468 L1017 -297 L324 -187 L-14 534 Z" fill="#000" />
+          <path d="M783 468 L735 605 L657 1225 L1150 1100 L830 570 Z" fill="#000" />
+          <circle cx="988" cy="285" r={small ? 38 : 31} fill="#000" />
+        </mask>
       </defs>
-
-      <circle cx="20" cy="20" r="19" fill={`url(#${glow})`} className="hami-orb-halo" />
-
-      <g className="hami-orb-orbits">
-        <ellipse cx="20" cy="20" rx="15.5" ry="6" transform="rotate(-28 20 20)" fill="none" stroke="#E6C46A" strokeOpacity="0.9" strokeWidth="1.1" />
-        <ellipse cx="20" cy="20" rx="15.5" ry="6" transform="rotate(32 20 20)" fill="none" stroke="#F4E9CF" strokeOpacity="0.55" strokeWidth="0.9" />
-        <circle cx="6.3" cy="27.3" r="1.7" fill="#F4E9CF" />
-        <circle cx="33.1" cy="28.2" r="1.4" fill="#E6C46A" />
-        <circle cx="29.4" cy="9.6" r="1.2" fill="#F4E9CF" fillOpacity="0.8" />
-      </g>
-
-      <g className="hami-orb-core">
-        <circle cx="20" cy="20" r="7.4" fill={`url(#${core})`} />
-        <circle cx="20" cy="20" r="7.4" fill="none" stroke="#FFF6DC" strokeOpacity="0.35" strokeWidth="0.6" />
-        <ellipse cx="17.6" cy="17.4" rx="2.4" ry="1.5" fill="#FFFFFF" fillOpacity="0.55" />
+      <g fill={`url(#${gold})`}>
+        <g mask={`url(#${mask})`}>
+          <path fillRule="evenodd" transform="rotate(-22.8 783 468)" d={small ? RING_SMALL : RING} />
+        </g>
+        <path fillRule="evenodd" d={STAR} />
+        <circle cx="988" cy="285" r={small ? 25 : 19} />
       </g>
     </svg>
   );
