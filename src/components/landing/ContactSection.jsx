@@ -8,11 +8,10 @@ const WEB3FORMS_ACCESS_KEY = '10c8222d-4605-46f0-8559-c51926a666f9';
 const CONSULTATION = 'Request a 15-Minute Introductory Consultation';
 
 const PROFILES = [
-  'Individual',
-  'Business Owner / Entrepreneur',
-  'Investor',
-  'Institutional Investor',
-  'Family Office',
+  'Individual / Household',
+  'Small Business Owner',
+  'Entrepreneur / Founder',
+  'Market Participant / Investor',
   'Organization / Other',
 ];
 
@@ -391,7 +390,7 @@ export default function ContactSection() {
             </h2>
 
             <p className="font-inter text-sm font-light text-muted-foreground leading-relaxed mb-10">
-              Every engagement begins with understanding. Whether you are an individual, investor, entrepreneur, or organization, NVeston provides disciplined analysis, strategic insight, and tailored advisory support designed around your objectives.
+              Every engagement begins with understanding your situation. Whether you are an individual, a business owner or an entrepreneur, NVeston provides disciplined analysis and decision support built around your objectives.
             </p>
 
             <div className="space-y-6">
