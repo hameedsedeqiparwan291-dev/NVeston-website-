@@ -309,3 +309,14 @@ Each step needs the founder's explicit authorization. Order matters.
 - Fastest: Vercel dashboard, then Deployments, then Instant Rollback to the previous production deployment (v1, commit `8c293dd`).
 - Source of record: tag `v1-baseline-2026-11-17` (= `8c293dd`). Restoring v1 in git is a revert or redeploy of that commit; never force-push over history.
 - The HAMI backend is independent of the website. A website rollback leaves the secured backend in place. v1's widget still offers the NEX Triangle question, but after step 1 it receives only the approved sentence.
+
+## 16. Permanent API expenditure and testing policy (adopted 2026-11-24 by the Founder & Managing Member)
+
+1. Internal testing defaults to offline tests, mocked AI responses, existing regression datasets and non-billable verification (health checks, protected-endpoint checks, routes answered without an AI call).
+2. No paid AI API calls for internal testing, demonstrations, routine monitoring, repeated evaluations or post-deployment verification without the Founder's explicit authorization for that specific activity and amount.
+3. An unused portion of a previously authorized testing budget is never spent automatically; each new test run needs its own authorization.
+4. HAMI keeps its full intelligence and responsiveness for genuine customers; this policy restricts internal testing only.
+5. The existing $10 monthly Anthropic API spending limit stays unchanged unless the Founder changes it.
+6. Genuine customer interactions are monitored only through the secured, founder-exclusive analytics system.
+7. Internal verification conversations are excluded from genuine customer engagement metrics without deleting historical records. Internal sessions are identifiable by the session-ID prefixes `nveston_verify_` (production verification) and `nveston_eval_` (local evaluations, which use a separate local database). A dashboard filter that applies this exclusion requires separate authorization.
+8. No automated monitoring that generates paid AI conversations.
