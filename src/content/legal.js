@@ -8,73 +8,42 @@ export const EFFECTIVE_DATE = '2026-11-24';
 export const LEGAL_DOCS = {
   disclosures: {
     title: 'Important Disclosures',
-    intro: 'This page describes NVeston’s regulatory status, the nature of its services and the limits of the information and tools on this website. Please read it before relying on any content you find here.',
+    intro: 'NVeston LLC is a financial intelligence and strategic advisory firm. This page sets out its corporate and regulatory status and the basis on which information on this website is provided.',
     sections: [
       {
-        h: 'Regulatory status',
+        h: 'Corporate and Regulatory Status',
         p: [
-          'NVeston LLC (“NVeston”) is a limited liability company organized in the Commonwealth of Massachusetts. Its registration with the Massachusetts Corporations Division is a corporate registration only.',
-          'NVeston is not registered as an investment adviser with the U.S. Securities and Exchange Commission or any state securities regulator. It is not a broker-dealer, bank, insurance producer or tax preparer, and it does not hold a professional financial license unless one is separately verified and disclosed.',
+          'NVeston LLC (“NVeston”) is a financial intelligence and strategic advisory firm organized under the laws of the Commonwealth of Massachusetts, United States.',
+          'NVeston provides financial analysis, market and economic intelligence, strategic advisory and decision support to individuals, entrepreneurs and businesses.',
+          'NVeston is not registered as an investment adviser with the U.S. Securities and Exchange Commission or any state securities regulator and is not a registered broker-dealer. Its services are limited to the scope of its lawful business activities and applicable regulatory requirements.',
         ],
       },
       {
-        h: 'How NVeston supports decisions',
+        h: 'Client engagements',
         p: [
-          'NVeston provides financial analysis, market and economic research, and strategic decision support. Our role is to help clients understand their situation, evaluate their options and make well-informed decisions of their own.',
-          'NVeston does not exercise discretionary authority over any client’s assets, accounts or affairs and does not make decisions on a client’s behalf. Clients retain full authority over their decisions and their implementation.',
+          'Analytical services are provided under a written agreement that defines their scope, fees and terms. Visiting this website, submitting an inquiry or attending an introductory consultation does not by itself create a client relationship.',
+          'NVeston does not hold client assets or make decisions on a client’s behalf. Clients retain full authority over their decisions and their implementation.',
         ],
       },
       {
-        h: 'Services NVeston does not provide',
+        h: 'Website content, tools and HAMI',
         p: [
-          'NVeston does not provide personalized investment advice or securities recommendations, asset allocation, portfolio or investment management, trading signals or the execution of transactions. It does not take custody of client assets, arrange or broker financing, or solicit investment.',
-          'NVeston does not provide legal, tax, accounting or audit services, and does not provide credit counseling, debt settlement or credit repair. Where a question requires one of these services, you should consult an appropriately qualified and licensed professional.',
+          'Articles, examples, tools and HAMI responses on this website are general information. They are not tailored to any person’s circumstances, objectives or risk tolerance. Examples and scenarios are hypothetical and use simplified assumptions; they are not client results or predictions.',
+          'Calculators and assessments provide estimates based only on the figures you enter and the assumptions stated; they are not financial plans, credit assessments or lender quotes. HAMI is an artificial-intelligence assistant whose responses are generated automatically and may be incomplete or inaccurate. Please confirm anything material with NVeston directly.',
         ],
       },
       {
-        h: 'Website information and contracted services',
+        h: 'Uncertainty and sources',
         p: [
-          'Content on this website, including articles, examples, scenarios, tools and HAMI responses, is general information. It is not directed at any particular person and does not take into account your individual circumstances, objectives or risk tolerance.',
-          'Analytical services are provided only under a separate written agreement that defines their scope, fees and terms. Visiting this website, submitting an inquiry, requesting or attending an introductory consultation, or exchanging correspondence does not by itself create a client relationship.',
-        ],
-      },
-      {
-        h: 'Hypothetical and illustrative examples',
-        p: [
-          'Examples and scenarios on this website are hypothetical and use simplified assumptions to illustrate concepts. They are not client results, case studies or predictions, and they do not indicate outcomes any person should expect.',
-        ],
-      },
-      {
-        h: 'Interactive tools',
-        p: [
-          'Calculators and assessments on this website perform simplified calculations based only on the figures you enter and the assumptions described on each tool. Results are estimates for analysis and planning. They are not financial plans, credit assessments, lender quotes or recommendations, and actual outcomes will differ.',
-          'Tool calculations run in your web browser. The figures you enter are not sent to NVeston and are not stored by NVeston.',
-        ],
-      },
-      {
-        h: 'HAMI, NVeston’s AI assistant',
-        p: [
-          'HAMI is an artificial-intelligence assistant that answers general questions about NVeston and its services. Its responses are generated automatically and may be incomplete or inaccurate. They are not personalized financial, investment, legal or tax advice. Please confirm anything material directly with NVeston, and do not share sensitive personal or financial information in the chat.',
-        ],
-      },
-      {
-        h: 'No guarantee of outcomes',
-        p: [
-          'Financial markets, economic conditions and business environments are uncertain. No analysis, framework or scenario can remove that uncertainty or guarantee a result. Past performance and historical observations do not guarantee or reliably predict future outcomes.',
-        ],
-      },
-      {
-        h: 'Third-party information',
-        p: [
-          'Where NVeston relies on information from public or third-party sources, we aim to identify the source and date. We believe those sources to be reliable when used but cannot guarantee their accuracy, completeness or timeliness.',
+          'Financial markets, economic conditions and business environments are inherently uncertain, and no analysis can guarantee a result. Past performance and hypothetical results do not guarantee future outcomes. Where we rely on public or third-party information, we identify the source where practicable but cannot guarantee its accuracy, completeness or timeliness.',
         ],
       },
       {
         h: 'Your decisions',
-        p: ['You remain responsible for your own financial, investment and business decisions and for how you use any information from NVeston.'],
+        p: ['You remain responsible for your own financial, investment and business decisions and for how you use information from NVeston.'],
       },
       {
-        h: 'Changes to these disclosures',
+        h: 'Changes',
         p: ['NVeston may update these disclosures as its services or applicable requirements change. The current version is always available on this page.'],
       },
     ],
@@ -82,135 +51,128 @@ export const LEGAL_DOCS = {
 
   privacy: {
     title: 'Privacy Policy',
-    intro: 'NVeston LLC (“NVeston”, “we”) is responsible for this website and for the personal information collected through it. This policy explains what we collect, how we use it and the choices available to you. We aim to collect as little personal information as possible.',
+    intro: 'NVeston LLC (“NVeston”, “we”, “us”) respects your privacy. This policy explains what personal information we collect through our website and HAMI, our AI assistant, how we use and protect it, and the choices available to you.',
     sections: [
       {
-        h: 'Information you choose to send us',
+        h: 'Information we collect',
         p: [
-          'When you use the contact form, we receive the information you provide: your name, email address, the profile and topic you select, your message and, for consultation requests, your preferred dates, times and time zone. Please do not include account numbers, passwords, Social Security numbers or other sensitive financial information.',
-          'Contact-form submissions are transmitted to Web3Forms, a third-party form-processing service, which delivers them to NVeston by email. Web3Forms processes this information under its own privacy terms. If you email us directly, we receive your email address and the contents of your message.',
+          'Information you provide. When you complete our contact form, we receive your name, email address, the profile and topic you select, your message and, for consultation requests, your preferred dates, times and time zone. If you email us, we receive your email address and message.',
+          'Conversations with HAMI. When you use HAMI, we receive your messages and the recent conversation in that browser session, together with HAMI’s responses, the page you were viewing and the time of each message.',
+          'Technical information. Like most websites, our systems and service providers automatically receive information such as your IP address, browser type, the pages you request and the time of your visit. If a HAMI response cannot be delivered, we may also receive diagnostic information, which can include part of your message.',
+          'Please do not send account numbers, passwords, Social Security numbers or other sensitive financial information through the contact form or HAMI.',
         ],
       },
       {
-        h: 'Information processed by HAMI',
+        h: 'How we use information',
         p: [
-          'HAMI, NVeston’s AI assistant, runs on a service operated by NVeston and hosted separately from this website. When you send HAMI a message, the message and the recent conversation from that browser session are sent to the HAMI service, which assigns a session identifier. If a response cannot be delivered, an error report containing the session identifier, the type of error and the first 500 characters of your question is also sent. Periodic availability checks contain no message content.',
-          'NVeston stores HAMI conversations, including your messages, HAMI’s responses, the page you were on, the time of each message, automatically generated classifications of the topics and services you asked about, and an automatically generated estimate of your interest in NVeston’s services, including whether a consultation was suggested. We use these records to understand visitor needs, improve HAMI’s responses and develop our services. Access to stored conversations and related analytics is restricted to NVeston’s Founder & Managing Member.',
-          'Please do not share sensitive personal or financial information with HAMI.',
+          'We use personal information to respond to your inquiries, arrange consultations and, if you become a client, deliver the work we agree with you. We also use it to operate and improve HAMI and our services, to keep our website secure and prevent misuse, and to meet our legal obligations.',
         ],
       },
       {
-        h: 'Service providers that process HAMI conversations',
+        h: 'HAMI conversations and automated analysis',
         p: [
-          'HAMI’s responses are generated by an artificial-intelligence model provided by Anthropic. Your message, the recent conversation and HAMI’s instructions are sent to Anthropic to produce each response, and Anthropic processes this information under its commercial terms and privacy policy. The HAMI service and its stored records are hosted by Railway, which also keeps technical logs, such as IP addresses and request times, under its own retention practices. These providers process information on NVeston’s behalf to operate the service.',
+          'We store HAMI conversations and analyze them automatically to identify the topics and services visitors ask about and to estimate interest in NVeston’s services, including whether a consultation was suggested. We use this analysis to improve HAMI and our services, not to make decisions with legal or similarly significant effects on you. Access to stored conversations is limited to authorized personnel.',
         ],
       },
       {
-        h: 'Retention and deletion of HAMI conversations',
+        h: 'Cookies and website analytics',
         p: [
-          'HAMI conversation records are kept until NVeston deletes them, and we review them periodically. You can ask us to delete the records of your conversations at any time by emailing contact@nveston.com with the approximate date and time of your conversation, and we will confirm when they have been deleted. Copies held by our service providers are governed by their own retention practices.',
+          'We do not use third-party analytics, advertising or tracking cookies, and we do not track you across other websites; our practices are therefore the same whether or not your browser sends a “Do Not Track” signal. HAMI uses your browser’s session storage only for display settings within the current tab; this contains no personal information.',
+          'Figures you enter into our calculators and assessments are processed in your browser and are not sent to or stored by NVeston.',
         ],
       },
       {
-        h: 'Information stored in your browser',
+        h: 'Service providers',
         p: [
-          'HAMI keeps two small markers in your browser’s session storage to remember whether its welcome message and reminder have been shown. They contain no personal information and are cleared when you close the browser tab.',
-          'Figures you enter into NVeston’s calculators and assessments are processed in your browser. They are not sent to NVeston, stored on our systems or shared with analytics or advertising providers.',
+          'We use technology service providers to host, operate and secure our website and HAMI, including processing HAMI conversations to generate responses, and to deliver the inquiries you send us. They process personal information on our behalf under contractual terms and may keep technical records, such as IP addresses, under their own retention practices. We may also disclose information where required by law or to protect the rights, property or safety of NVeston, our users or others. We do not sell personal information or share it with third parties for their own marketing or for targeted advertising.',
         ],
       },
       {
-        h: 'Cookies and analytics',
+        h: 'International processing',
         p: [
-          'This website does not set analytics, advertising or tracking cookies, and NVeston does not currently use analytics services on it. If that changes, this policy will be updated before such tools are introduced.',
+          'NVeston operates in the United States, and our service providers may process information in the United States and other countries. If you visit from outside the United States, your information will be processed in the United States, where data protection laws may differ from those in your country.',
         ],
       },
       {
-        h: 'Hosting and website delivery',
+        h: 'Retention',
         p: [
-          'The website is hosted by Vercel, which processes basic technical information such as IP addresses, browser type and requested pages in order to deliver and secure the website. Fonts are loaded from Google Fonts, which means your browser connects to Google’s servers and shares information such as your IP address with Google.',
+          'We keep inquiry information for as long as needed to respond to you, coordinate any consultation and maintain reasonable business records. HAMI conversation records are kept until we delete them; we have not set a fixed retention period, and you may ask us to delete your conversations at any time.',
         ],
       },
       {
-        h: 'How we use and share information',
+        h: 'Security',
         p: [
-          'We use the information you send us to respond to your inquiry, to coordinate a requested consultation and, if you become a client, to deliver the agreed work. We share it only with the service providers described in this policy, as needed to operate the website and HAMI, or where required by law. We do not sell your personal information or share it with third parties for their own marketing.',
+          'We use reasonable administrative, technical and organizational measures to protect personal information, including limiting access to authorized personnel. No method of transmission or storage is completely secure, and we cannot guarantee absolute security.',
         ],
       },
       {
-        h: 'Retention and security',
+        h: 'Your rights and choices',
         p: [
-          'We keep inquiry information for as long as needed to respond to you and to maintain reasonable business records, and we take reasonable measures to protect it. No method of transmission or storage is completely secure, and we cannot guarantee absolute security.',
+          'You may ask us to access, correct or delete personal information you have provided, including your HAMI conversations, by emailing contact@nveston.com; for HAMI conversations, please include the approximate date and time. We will respond within a reasonable time and as required by applicable law, and we will not treat you differently for exercising these rights. Depending on where you live, you may have additional rights under local law.',
         ],
-      },
-      {
-        h: 'Your choices',
-        p: ['You may ask us to access, correct or delete personal information you have sent us by emailing contact@nveston.com. We will respond within a reasonable time and in line with applicable law.'],
       },
       {
         h: 'Children',
-        p: ['This website is not directed to children under 13, and we do not knowingly collect their personal information.'],
+        p: ['Our website is not directed to children under 13, and we do not knowingly collect their personal information.'],
       },
       {
-        h: 'Changes to this policy',
-        p: ['We may update this policy as the website or our practices change. The current version, with its effective date, is always available on this page.'],
+        h: 'Changes and contact',
+        p: ['We may update this policy as our services or legal requirements change; the current version and its effective date are always available on this page. Questions can be sent to contact@nveston.com. NVeston LLC, Massachusetts, United States.'],
       },
     ],
   },
 
   terms: {
     title: 'Terms of Use',
-    intro: 'These Terms of Use govern your use of the website operated by NVeston LLC (“NVeston”), including its content, tools and AI assistant. By using the website, you agree to these terms.',
+    intro: 'These Terms of Use govern your use of the website operated by NVeston LLC (“NVeston”), including its content, tools and AI assistant, HAMI. By using the website, you agree to these terms.',
     sections: [
       {
         h: 'Use of the website',
-        p: ['You may use this website for lawful purposes and for your own personal or internal business information. You agree not to misuse it, for example by attempting to disrupt it, gain unauthorized access to it, or extract its content in bulk by automated means.'],
+        p: [
+          'You may use this website for lawful purposes and for your own personal or internal business information. You agree not to misuse it, including by attempting to disrupt it, gain unauthorized access to it, or extract its content in bulk by automated means.',
+        ],
       },
       {
         h: 'Nature of the content',
-        p: ['Website content, tools and HAMI responses are general information. They are not personalized investment, financial, legal, tax or accounting advice, and using the website does not create a client relationship. Analytical services are provided only under a separate written agreement. Our Important Disclosures describe NVeston’s regulatory status and services in full.'],
+        p: [
+          'Website content, tools and HAMI responses are general information. They are not personalized investment, financial, legal, tax or accounting advice, and using the website does not create a client relationship. Analytical services are provided only under a separate written agreement. Our Important Disclosures describe NVeston’s corporate and regulatory status.',
+        ],
       },
       {
-        h: 'Tools and estimates',
-        p: ['Calculators and assessments provide simplified estimates based on the information you enter and the assumptions shown. You are responsible for checking any result before relying on it and for seeking appropriate professional advice where needed.'],
-      },
-      {
-        h: 'AI-generated responses',
-        p: ['HAMI’s responses are generated automatically by an artificial-intelligence system. They may be incomplete, out of date or incorrect, and they do not represent a commitment, offer or professional opinion from NVeston. Please verify anything material directly with NVeston before relying on it.'],
+        h: 'Tools and AI-generated responses',
+        p: [
+          'Calculators and assessments provide simplified estimates based on the information you enter and the assumptions shown; you are responsible for checking any result before relying on it. HAMI’s responses are generated automatically by an artificial-intelligence system. They may be incomplete, out of date or incorrect, and they are not a commitment, offer or professional opinion from NVeston. Please verify anything material with NVeston directly.',
+        ],
       },
       {
         h: 'Intellectual property',
         p: [
-          'The NVeston name and logo, the HAMI name and identity, and the website’s text, analysis, graphics and software are owned by NVeston LLC or used with permission, and are protected by intellectual property laws. Third-party materials, including fonts and icons used under their respective open-source licenses, remain the property of their owners.',
+          'The NVeston name and logo, the HAMI name and identity, and the website’s text, analysis, graphics and software are owned by NVeston LLC or used with permission and are protected by intellectual property laws. Third-party materials, including open-source software and fonts, remain the property of their owners and are used under their licenses.',
           'NVeston grants you a limited, non-exclusive, revocable permission to view and use the website for the purposes described in these terms. You may share links to our pages and quote brief passages with attribution. Any other reproduction, distribution, modification or commercial use requires our prior written consent, except where the law permits it.',
         ],
       },
       {
         h: 'Third-party links and services',
-        p: ['The website may link to or rely on third-party websites and services, such as LinkedIn or our form-processing provider. NVeston is not responsible for their content, availability or practices.'],
+        p: ['The website may link to or rely on third-party websites and services. NVeston is not responsible for their content, availability or practices.'],
       },
       {
         h: 'Disclaimer and limitation of liability',
-        p: ['The website is provided “as is” and “as available.” To the fullest extent permitted by law, NVeston makes no warranties about the website’s accuracy, completeness or availability, and is not liable for losses arising from reliance on website content, tools or HAMI responses, from decisions made on that basis, or from interruptions to the website.'],
-      },
-      {
-        h: 'Rights that cannot be excluded',
-        p: ['Nothing in these terms excludes or limits any right, protection or liability that cannot lawfully be excluded or limited, including rights you may have under applicable consumer protection laws.'],
+        p: [
+          'The website is provided “as is” and “as available.” To the fullest extent permitted by law, NVeston makes no warranties about the website’s accuracy, completeness or availability, and is not liable for losses arising from reliance on website content, tools or HAMI responses, from decisions made on that basis, or from interruptions to the website.',
+          'Nothing in these terms excludes or limits any right, protection or liability that cannot lawfully be excluded or limited, including rights under applicable consumer protection laws.',
+        ],
       },
       {
         h: 'Governing law',
-        p: ['These terms are governed by the laws of the Commonwealth of Massachusetts, without regard to its conflict-of-law rules, subject to any mandatory law and consumer protections that apply where you live.'],
+        p: [
+          'These terms are governed by the laws of the Commonwealth of Massachusetts, without regard to its conflict-of-law rules, subject to any mandatory law and consumer protections that apply where you live. If any provision is found unenforceable, it will be enforced to the maximum extent permitted, and the remaining provisions will remain in effect.',
+        ],
       },
       {
-        h: 'Severability',
-        p: ['If any provision of these terms is found unenforceable, it will be enforced to the maximum extent permitted, and the remaining provisions will remain in full effect.'],
-      },
-      {
-        h: 'Changes',
-        p: ['NVeston may update the website and these terms. The current version, with its effective date, is always available on this page, and continued use of the website after an update means you accept the revised terms.'],
-      },
-      {
-        h: 'Contact',
-        p: ['Questions about these terms can be sent to contact@nveston.com.'],
+        h: 'Changes and contact',
+        p: [
+          'NVeston may update the website and these terms. The current version, with its effective date, is always available on this page, and continued use of the website after an update means you accept the revised terms. Questions about these terms can be sent to contact@nveston.com.',
+        ],
       },
     ],
   },
